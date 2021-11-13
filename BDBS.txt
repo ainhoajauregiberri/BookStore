@@ -45,6 +45,8 @@ autor16=Autor.objects.get(pk=16)
 
 Libro
 
+No hacer caso{
+
 libro = Libro(nombre=" Harry Potter y la piedra filosofal", autores=autor1, editorial= editorial1, genero=genero1, idioma=idioma1, paginas=150)
 
 libro = Libro(nombre="Nur 1", autores=autor2, editorial= editorial2, genero=genero2, idioma=idioma1, paginas=400)
@@ -56,6 +58,12 @@ libro = Libro(nombre="Charlie y la fábrica de chocolate", autores=autor3, edito
 libro = Libro(nombre="Matilda", autores=autor3, editorial= editorial1, genero=genero2, idioma=idioma1, paginas=390)
 
 libro = Libro(nombre="Los 5", autores=autor4, autores=autor8,autores=autor9,editorial= editorial2, genero=genero3, idioma=idioma1, paginas=450)
+
+libro = Libro(nombre="La casa de los espíritus", autores=autor6, editorial= editorial1, genero=genero3, idioma=idioma1, paginas=568)
+
+libro = Libro(nombre="Bi anai", autores=autor5, editorial= editorial2, genero=genero2, idioma=idioma1, paginas=459)
+
+
 
 libro = Libro(nombre="Hijo de la fortuna", autores=autor6, editorial= editorial2, genero=genero2, idioma=idioma2, paginas=340)
 
@@ -81,12 +89,154 @@ libro = Libro(nombre="Matilda", autores=autor3, editorial= editorial1, genero=ge
 libro = Libro(nombre="Los 5", autores=autor4, autores=autor8,autores=autor9,editorial= editorial2, genero=genero3, idioma=idioma1, paginas=450)
 
 
-libro = Libro(nombre="La casa de los espíritus", autores=autor6, editorial= editorial1, genero=genero3, idioma=idioma1, paginas=568)
 
-libro = Libro(nombre="Bi anai", autores=autor5, editorial= editorial2, genero=genero2, idioma=idioma1, paginas=459)
+
 
 libro = Libro(nombre="Nur3", autores=autor2 editorial=editorial2, genero=genero1, idioma=idioma2, paginas=560)
 
 libro = Libro(nombre="Harry Potter y el prisionero de Azkaban", autores=autor1 editorial=editorial1, genero=genero3, idioma=idioma2, paginas=300)
 
 libro = Libro(nombre="Harry Potter y la cámara secreta", autores=autor1 editorial=editorial2, genero=genero2, idioma=idioma2, paginas=450)
+}
+
+Libros:
+1 Harry Potter y la piedra filosofal 
+1 J.K.Rowling
+1 Planetadelibros
+1 Comedia
+1 Euskara
+150
+
+2 Nur 1
+2 Toti Martinez de Lezea
+2 Erein
+2 Drama
+1 Euskara
+400
+
+3 Nur 2
+2 Toti Martinez de Lezea
+1 Planetadelibros
+3 Thriller
+1 Euskara
+300
+
+4 Charlie y la fábrica de chocolate
+3 Roald Dahl
+2 Erein
+1 Comedia
+1 Euskara
+279
+
+5 Matilda
+3 Roald Dahl
+1 Planetadelibros
+2 Drama
+1 Euskara
+390
+
+6 Los 5
+4 Enid Blyton
+8 Claude Voilier
+9 Eileen Soper
+2 Erein
+3 Thriller
+1 Euskara
+450
+
+7 La casa de los espíritus
+6 Isabel Allende
+1 Planetadelibros
+1 Comedia
+1 Euskara
+568
+
+8 Bi anai
+5 Bernardo Atxaga
+2 Erein
+2 Drama
+1 Euskara
+459
+
+9 Obabakoak
+5 Bernardo Atxaga
+1 Planetadelibros
+1 Comedia
+2 Castellano
+450
+
+10 Hijo de la fortuna
+6 Isabel Allende
+2 Erein
+2 Drama
+2 Castellano
+340
+
+11 La balada de medio pelo
+6 Isabel Allende
+1 Planetadelibros
+3 Thriller
+2 Castellano
+800
+
+12 Las brujas
+3 Roald Dahl
+2 Erein
+1 Comedia
+2 Castellano
+780
+
+13 El gran gigante bonachón
+3 Roald Dahl
+1 Planetadelibros
+2 Drama
+2 Castellano
+450
+
+14 James y el melocotón gigante
+3 Roald Dahl
+2 Erein
+3 Thriller
+2 Castellano
+670
+
+15 El dedo mágico
+3 Roald Dahl
+1 Planetadelibros
+1 Comedia
+2 Castellano
+450
+
+16 Harry Potter y la cámara secreto
+1 J.K.Rowling
+2 Erein
+2 Drama
+2 Castellano
+450
+
+17 Harry Potter y el prisionero de Azkaban
+1 J.K.Rowling
+1 Planetadelibros
+3 Thriller
+2 Castellano
+300
+
+18 Nur 3
+2 Toti Martinez de Lezea
+2 Erein
+1 Comedia
+2 Castellano
+560
+
+19 Tomas Zumalakarregi eta bere garaia
+10 Patxi Zabaleta
+11 Mikel Sorauren
+12 Juantxo Madariaga
+13 Xabier Irujo
+14 Fernando Sanchez Aranaz
+15 Idoia Arrieta
+16 Asisko Urmeneta
+1 Planetadelibros
+2 Drama
+1 Euskara
+450
