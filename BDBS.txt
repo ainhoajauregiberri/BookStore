@@ -1,0 +1,92 @@
+Models BookStore
+
+Libro(nombre editorial, lista de autores, nombre, idioma, genero, paginas)
+
+Editorial(lista de libros, nombre)
+
+
+
+BD
+
+Editorial
+
+editorial1=Editorial.objects.get(pk=1)
+editorial2=Editorial.objects.get(pk=2)
+
+Genero
+
+genero1=Genero.objects.get(pk=1)
+genero2=Genero.objects.get(pk=2)
+genero3=Genero.objects.get(pk=3)
+
+Idioma
+
+idioma1=Idioma.objects.get(pk=1)
+idioma2=Idioma.objects.get(pk=2)
+
+Autor
+
+autor1=Autor.objects.get(pk=1)
+autor2=Autor.objects.get(pk=2)
+autor3=Autor.objects.get(pk=3)
+autor4=Autor.objects.get(pk=4)
+autor5=Autor.objects.get(pk=5)
+autor6=Autor.objects.get(pk=6)
+autor7=Autor.objects.get(pk=7)
+autor8=Autor.objects.get(pk=8)
+autor9=Autor.objects.get(pk=9)
+autor10=Autor.objects.get(pk=10)
+autor11=Autor.objects.get(pk=11)
+autor12=Autor.objects.get(pk=12)
+autor13=Autor.objects.get(pk=13)
+autor14=Autor.objects.get(pk=14)
+autor15=Autor.objects.get(pk=15)
+autor16=Autor.objects.get(pk=16)
+
+Libro
+
+libro = Libro(nombre=" Harry Potter y la piedra filosofal", autores=autor1, editorial= editorial1, genero=genero1, idioma=idioma1, paginas=150)
+
+libro = Libro(nombre="Nur 1", autores=autor2, editorial= editorial2, genero=genero2, idioma=idioma1, paginas=400)
+
+libro = Libro(nombre="Nur 2", autores=autor2, editorial= editorial1, genero=genero3, idioma=idioma1, paginas=300)
+
+libro = Libro(nombre="Charlie y la fábrica de chocolate", autores=autor3, editorial= editorial2, genero=genero1, idioma=idioma1, paginas=279)
+
+libro = Libro(nombre="Matilda", autores=autor3, editorial= editorial1, genero=genero2, idioma=idioma1, paginas=390)
+
+libro = Libro(nombre="Los 5", autores=autor4, autores=autor8,autores=autor9,editorial= editorial2, genero=genero3, idioma=idioma1, paginas=450)
+
+libro = Libro(nombre="Hijo de la fortuna", autores=autor6, editorial= editorial2, genero=genero2, idioma=idioma2, paginas=340)
+
+libro = Libro(nombre="La balada de medio pelo", autores=autor6, editorial= editorial1, genero=genero3, idioma=idioma2, paginas=800)
+
+libro = Libro(nombre="Las brujas", autores=autor3, editorial= editorial2, genero=genero1, idioma=idioma2, paginas=780)
+
+libro = Libro(nombre="El gran gigante bonachón", autores=autor3, editorial= editorial1, genero=genero2, idioma=idioma2, paginas=450)
+
+libro = Libro(nombre="James y el melocotón gigante", autores=autor3, editorial= editorial2, genero=genero3, idioma=idioma2, paginas=670)
+
+libro = Libro(nombre="El dedo mágico", autores=autor3, editorial= editorial1, genero=genero1, idioma=idioma2, paginas=450)
+
+libro = Libro(nombre="Tomas Zumalakarregi eta bere garaia", autores=autor10, autores=autor11, autores=autor12, autores=autor13, autores=autor14, autores=autor15, autores=autor16, editorial= editorial1, genero=genero2, idioma=idioma1, paginas=450)
+
+libro = Libro(nombre="Harry Potter y la piedra filosofal", autores=autor1, editorial= editorial1, genero=genero1, idioma=idioma1, paginas=150)
+
+libro = Libro(nombre="Nur 1", autores=autor2, editorial= editorial2, genero=genero2, idioma=idioma1, paginas=400)
+libro = Libro(nombre="Nur 2", autores=autor2, editorial= editorial1, genero=genero3, idioma=idioma1, paginas=300)
+libro = Libro(nombre="Charlie y la fábrica de chocolate", autores=autor3, editorial= editorial2, genero=genero1, idioma=idioma1, paginas=279)
+
+libro = Libro(nombre="Matilda", autores=autor3, editorial= editorial1, genero=genero2, idioma=idioma1, paginas=390)
+libro = Libro(nombre="Los 5", autores=autor4, autores=autor8,autores=autor9,editorial= editorial2, genero=genero3, idioma=idioma1, paginas=450)
+
+
+libro = Libro(nombre="La casa de los espíritus", autores=autor6, editorial= editorial1, genero=genero3, idioma=idioma1, paginas=568)
+
+libro = Libro(nombre="Bi anai", autores=autor5, editorial= editorial2, genero=genero2, idioma=idioma1, paginas=459)
+
+libro = Libro(nombre="Nur3", autores=autor2 editorial=editorial2, genero=genero1, idioma=idioma2, paginas=560)
+
+libro = Libro(nombre="Harry Potter y el prisionero de Azkaban", autores=autor1 editorial=editorial1, genero=genero3, idioma=idioma2, paginas=300)
+
+libro = Libro(nombre="Harry Potter y la cámara secreta", autores=autor1 editorial=editorial2, genero=genero2, idioma=idioma2, paginas=450)
