@@ -10,7 +10,8 @@
             {% for libro in lista_libros %}
           
             <li>
-                {{ libro.id }}: {{ libro.nombre }}
+                {{ libro.id }}: 
+                <a href= "/appBookStore/libro/{{ libro.id }}/autores/">{{ libro.nombre }}</a>
             </li>
             {% endfor %}
         </ul>

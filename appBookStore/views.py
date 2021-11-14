@@ -13,43 +13,47 @@ def index(request):
 	editorial2 = Editorial.objects.get(pk=2)
 	librosEd2 = editorial2.libro_set.all()
 	librosEd2 = librosEd2.order_by('nombre')
+
 	
-	output = ', '.join([str(librosEd1[0].id), str(librosEd1[0].nombre), str(librosEd1[0].editorial), str([a.nombre for a in librosEd1[0].autores.all()]), str(librosEd2[0].id), str(librosEd2[0].nombre), str(librosEd2[0].editorial), str([a.nombre for a in librosEd2[0].autores.all()])])
-	return HttpResponse(output)
+	context = {'libro1': librosEd1, 'libro2': librosEd2}
+	return render(request, 'index.html', context)
 
 #devuelve la lista de LIBROS
 def listaLibros(request):
-	libros = Libro.objects.order_by('id')
+	libros = get_list_or_404(Libro.objects.order_by('id'))
 	context = {'lista_libros' : libros}
 	return render(request, 'listaLibros.html', context)
 
 #devuelve los detalles de un LIBRO
 def detallesLibro(request, libro_id):
-	libro = Libro.objects.get(pk=libro_id)
-	output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])
-	return HttpResponse(output)
+	libro = get_object_or_404(Libro, pk=libro_id)
+	autores = libro.autores.all()
+	context = {'libro' : libro, 'autores' : autores}
+	return render(request, 'detallesLibro.html', context)
 
 
 #devuelve la lista de EDITORIALES
 def listaEditoriales(request):
-	editoriales = Editorial.objects.order_by('id')
+	editoriales = get_list_or_404(Editorial.objects.order_by('id'))
 	context = {'lista_editoriales' : editoriales}
 	return render(request, 'listaEditoriales.html', context)	
 
 #devuelve los detalles de EDITORIALES
 def detallesEditoriales(request, editorial_id):
-	editorial = Editorial.objects.get(pk=editorial_id)
-	output = ', '.join([str(editorial.id), editorial.nombre, str([l.nombre for l in editorial.libro_set.all()])])
-	return HttpResponse(output)
+	editorial = get_object_or_404(Editorial, pk=editorial_id)
+	libros = editorial.libro_set.all()
+	context = {'editorial' : editorial, 'libros' : libros}
+	return render(request, 'detallesEditorial.html', context)
 
 #devuelve la lista de AUTORES
 def listaAutores(request):
-	autores = Autor.objects.order_by('id')
+	autores = get_list_or_404(Autor.objects.order_by('id'))
 	context = {'lista_autores' : autores}
 	return render(request, 'listaAutores.html', context)	
 
 #devuelve los detalles de los AUTORES
 def detallesAutores(request, autor_id):
-	autor = Autor.objects.get(pk=autor_id)
-	output = ', '.join([str(autor.id), autor.nombre, str([l.nombre for l in autor.libro_set.all()])])
-	return HttpResponse(output)
+	autor = get_object_or_404(Autor, pk=autor_id)
+	libros = autor.libro_set.all()
+	context = {'autor' : autor, 'libros': libros}
+	return render(request, 'detallesAutor.html', context)

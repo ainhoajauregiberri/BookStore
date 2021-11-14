@@ -10,7 +10,8 @@
             {% for editorial in lista_editoriales %}
           
             <li>
-                {{ editorial.id }}: {{ editorial.nombre }}
+                {{ editorial.id }}:
+                <a href= "/appBookStore/editorial/{{ editorial.id }}/libros/">{{ editorial.nombre }}</a>
             </li>
             {% endfor %}
         </ul>

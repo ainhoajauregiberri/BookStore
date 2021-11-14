@@ -1,0 +1,36 @@
+<!--output = ', '.join([str(editorial.id), editorial.nombre, str([l.nombre for l in editorial.libro_set.all()])])-->
+
+{% extends "base.html" %}
+
+{% block titulo %} Detalle de la editorial {% endblock %}
+
+{% block contenido %}
+<h2>Datos de la editorial</h2>
+
+{% if editorial %}
+    <ul>
+        <li>
+            {{ editorial.id}}
+        </li>
+        <li>
+            {{ editorial.nombre}}
+        </li>
+        <li>
+            {% if libros %}
+            <ul>
+            {% for l in libros %}
+                <li>
+                    <a href= "/appBookStore/libro/{{ l.id }}/autores/">{{ l.nombre }}</a>
+                </li>
+            {% endfor %}
+            </ul> 
+            {% else %}
+                <p>La editorial {{editorial.nombre}} no tiene libros</p>
+            {% endif %}
+        </li>
+    </ul>
+{% else %}
+    <p>No existe esta editorial.</p>
+{% endif %}
+
+{% endblock %}

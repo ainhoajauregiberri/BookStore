@@ -1,0 +1,29 @@
+<!--output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])-->
+{% extends "base.html" %}
+
+{% block titulo %}Listado de libro por editorial{% endblock %}
+
+{% block contenido %}
+<h2>Listado de libro por editorial</h2>
+
+<ul>
+    {% if libro1 %}
+        {% if libro2 %}
+            <li>
+                <a href="/appBookStore/libro/{{ libro1.id }}/autores/">{{ libro1.nombre }}</a>
+            </li>
+            <li>
+                <a href="/appBookStore/libro/{{ libro2.id }}/autores/">{{ libro2.nombre }}</a>
+            </li>
+        {% else %}
+            <p>No hay libros disponibles de la editorial libro2.editorial.nombre</p>
+        {% endif %}
+
+    {% else %}
+    <p>No hay libros disponibles</p>   
+    {% endif %}
+            
+</ul>
+
+
+{% endblock %}
