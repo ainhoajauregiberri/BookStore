@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>App Django</title>
+
+    </head>
+    <body>
+        <h1>App Libros</h1>
+        <h2>Listado de editoriales</h2>
+        <ul>
+            {% for editorial in lista_editoriales %}
+          
+            <li>
+                {{ editorial.id }}: {{ editorial.nombre }}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
