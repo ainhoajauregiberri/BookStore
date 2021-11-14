@@ -1,4 +1,5 @@
  <!--output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])-->
+<<<<<<< HEAD
  {% extends "base.html" %}
 
  {% block titulo %} Detalle del libro{% endblock %}
@@ -33,3 +34,35 @@
  {% endif %}
  
  {% endblock %}
+=======
+{% extends "base.html" %}
+
+{% block titulo %} Detalle del autor {% endblock %}
+
+{% block contenido %}
+<h2>Datos del autor</h2>
+
+{% if autor %}
+    <ul>
+        <li>
+            {{ autor.id}}
+        </li>
+        <li>
+            {{ autor.nombre}}
+        </li>
+        <li>
+            <ul>
+            {% for l in autor.libro_set.all() %}
+                <li>
+                    <a href= "/appBookStore/libro/{{ l.id }}/autores/">{{ l.nombre }}</a>
+                </li>
+            {% endfor %}
+            </ul> 
+        </li>
+    </ul>
+{% else %}
+    <p>No existe este autor.</p>
+{% endif %}
+
+{% endblock %}
+>>>>>>> 4b5024b6bcc11710f7937e47a20fe62d9870e4e8

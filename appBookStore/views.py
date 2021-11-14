@@ -27,8 +27,12 @@ def listaLibros(request):
 #devuelve los detalles de un LIBRO
 def detallesLibro(request, libro_id):
 	libro = get_object_or_404(Libro, pk=libro_id)
+<<<<<<< HEAD
 	autores = libro.autores.all()
 	context = {'libro' : libro, 'autores' : autores}
+=======
+	context = {'libro' : libro}
+>>>>>>> 4b5024b6bcc11710f7937e47a20fe62d9870e4e8
 	return render(request, 'detallesLibro.html', context)
 
 
@@ -41,8 +45,12 @@ def listaEditoriales(request):
 #devuelve los detalles de EDITORIALES
 def detallesEditoriales(request, editorial_id):
 	editorial = get_object_or_404(Editorial, pk=editorial_id)
+<<<<<<< HEAD
 	libros = editorial.libro_set.all()
 	context = {'editorial' : editorial, 'libros' : libros}
+=======
+	context = {'editorial' : editorial}
+>>>>>>> 4b5024b6bcc11710f7937e47a20fe62d9870e4e8
 	return render(request, 'detallesEditorial.html', context)
 
 #devuelve la lista de AUTORES
