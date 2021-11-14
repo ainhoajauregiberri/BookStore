@@ -26,8 +26,8 @@ def listaLibros(request):
 #devuelve los detalles de un LIBRO
 def detallesLibro(request, libro_id):
 	libro = Libro.objects.get(pk=libro_id)
-	output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])
-	return HttpResponse(output)
+	context = {'libro' : libro}
+	return render(request, 'detallesLibro.html', context)
 
 
 #devuelve la lista de EDITORIALES
@@ -39,8 +39,8 @@ def listaEditoriales(request):
 #devuelve los detalles de EDITORIALES
 def detallesEditoriales(request, editorial_id):
 	editorial = Editorial.objects.get(pk=editorial_id)
-	output = ', '.join([str(editorial.id), editorial.nombre, str([l.nombre for l in editorial.libro_set.all()])])
-	return HttpResponse(output)
+	context = {'editorial' : editorial}
+	return render(request, 'detallesEditorial.html', context)
 
 #devuelve la lista de AUTORES
 def listaAutores(request):
@@ -51,5 +51,5 @@ def listaAutores(request):
 #devuelve los detalles de los AUTORES
 def detallesAutores(request, autor_id):
 	autor = Autor.objects.get(pk=autor_id)
-	output = ', '.join([str(autor.id), autor.nombre, str([l.nombre for l in autor.libro_set.all()])])
-	return HttpResponse(output)
+	context = {'autor' : autor}
+	return render(request, 'detallesAutor.html', context)
