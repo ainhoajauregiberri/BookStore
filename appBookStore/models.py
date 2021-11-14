@@ -9,27 +9,27 @@ class Autor(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
     nombre = models.CharField(max_length=50)
     def __str__(self):
-        return f"id={self.id}, nombre{self.nombre}"
+        return f"{self.id}. {self.nombre}"
 
 class Editorial(models.Model):
     nombre = models.CharField(max_length=50)
 # Campo para la relación one-to-many
     def __str__(self):
-        return f"id={self.id}, nombre{self.nombre}"
+        return f"{self.id}. {self.nombre}"
 	
 
 class Genero(models.Model):
     nombre = models.CharField(max_length=50)
 # Campo para la relación one-to-many
     def __str__(self):
-        return f"id={self.id}, nombre{self.nombre}"
+        return f"{self.id}. {self.nombre}"
 
 
 class Idioma(models.Model):
     nombre = models.CharField(max_length=50)
 # Campo para la relación one-to-many
     def __str__(self):
-        return f"id={self.id}, nombre{self.nombre}"
+        return f"{self.id}. {self.nombre}"
 
 class Libro(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
@@ -40,7 +40,7 @@ class Libro(models.Model):
     idioma = models.ForeignKey(Idioma, on_delete=models.CASCADE)
     paginas = models.IntegerField(default=0)
     def __str__(self):
-        return f"id={self.id}, nombre={self.nombre}, autores={self.autores.all()}, editorial={self.editorial}, genero={self.genero}, idioma={self.idioma}, paginas={self.paginas}"
+        return f"{self.id}. {self.nombre}, {self.autores.all()}, {self.editorial}, {self.genero}, {self.idioma}, {self.paginas} páginas"
 
 
 
