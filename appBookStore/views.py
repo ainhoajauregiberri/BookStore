@@ -1,23 +1,27 @@
 from django.http import HttpResponse, Http404
 from django.shortcuts import get_object_or_404, get_list_or_404
+from django.shortcuts import render
 from .models import Autor, Genero, Idioma, Editorial, Libro
 
 
 #devuelve el listado de libros de cada editorial
 def index(request):
-	librosEd1 = Libro.objects.get(editorial_id=1)
+	editorial1 = Editorial.objects.get(pk=1)
+	librosEd1 = editorial1.libro_set.all()
 	librosEd1 = librosEd1.order_by('nombre')
-	
-	librosEd2 = Libro.objects.get(editorial_id=2)
+
+	editorial2 = Editorial.objects.get(pk=2)
+	librosEd2 = editorial2.libro_set.all()
 	librosEd2 = librosEd2.order_by('nombre')
-	output = ', '.join(librosEd1[0], librosEd2[0])
+	
+	output = ', '.join([str(librosEd1[0].id), str(librosEd1[0].nombre), str(librosEd1[0].editorial), str([a.nombre for a in librosEd1[0].autores.all()]), str(librosEd2[0].id), str(librosEd2[0].nombre), str(librosEd2[0].editorial), str([a.nombre for a in librosEd2[0].autores.all()])])
 	return HttpResponse(output)
 
 #devuelve la lista de LIBROS
 def listaLibros(request):
-	libros = Libro.objects.order_by('nombre')
-	output = ', '.join([l.nombre for l in libros])
-	return HttpResponse(output)	
+	libros = Libro.objects.order_by('id')
+	context = {'lista_libros' : libros}
+	return render(request, 'listaLibros.html', context)
 
 #devuelve los detalles de un LIBRO
 def detallesLibro(request, libro_id):
@@ -25,11 +29,12 @@ def detallesLibro(request, libro_id):
 	output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])
 	return HttpResponse(output)
 
+
 #devuelve la lista de EDITORIALES
 def listaEditoriales(request):
-	editoriales = Editorial.objects.order_by('nombre')
-	output = ', '.join([e.nombre for e in editoriales])
-	return HttpResponse(output)		
+	editoriales = Editorial.objects.order_by('id')
+	context = {'lista_editoriales' : editoriales}
+	return render(request, 'listaEditoriales.html', context)	
 
 #devuelve los detalles de EDITORIALES
 def detallesEditoriales(request, editorial_id):
@@ -39,9 +44,9 @@ def detallesEditoriales(request, editorial_id):
 
 #devuelve la lista de AUTORES
 def listaAutores(request):
-	autores = Autor.objects.order_by('nombre')
-	output = ', '.join([a.nombre for a in autores])
-	return HttpResponse(output)	
+	autores = Autor.objects.order_by('id')
+	context = {'lista_autores' : autores}
+	return render(request, 'listaAutores.html', context)	
 
 #devuelve los detalles de los AUTORES
 def detallesAutores(request, autor_id):
