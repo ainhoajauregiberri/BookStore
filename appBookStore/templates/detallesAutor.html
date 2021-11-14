@@ -1,11 +1,35 @@
-<html>
-    <head>
-        <title>App Django</title>
+<!--output = ', '.join([str(autor.id), autor.nombre, str([l.nombre for l in autor.libro_set.all()])])-->
+{% extends "base.html" %}
 
-    </head>
-    <body>
-        <h1>App Libros</h1>
-        <h2>Detalles del autor</h2>
-        <!--output = ', '.join([str(autor.id), autor.nombre, str([l.nombre for l in autor.libro_set.all()])])-->
-    </body>
-</html>
+{% block titulo %} Detalle del autor {% endblock %}
+
+{% block contenido %}
+<h2>Datos del autor</h2>
+
+{% if autor %}
+    <ul>
+        <li>
+            {{ autor.id}}
+        </li>
+        <li>
+            {{ autor.nombre}}
+        </li>
+        <li>
+            {% if libros %}
+            <ul>
+            {% for l in libros %}
+                <li>
+                    <a href= "/appBookStore/libro/{{ l.id }}/autores/">{{ l.nombre }}</a>
+                </li>
+            {% endfor %}
+            </ul> 
+            {% else %}
+                <p>Este autor no tiene libros</p>
+            {% endif %}
+        </li>
+    </ul>
+{% else %}
+    <p>No existe este autor.</p>
+{% endif %}
+
+{% endblock %}
