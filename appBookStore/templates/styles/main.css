@@ -1,0 +1,444 @@
+*{
+    margin:0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 20%;
+}
+
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+/*body*/
+
+body{
+    background: rgb(255, 255, 255);
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 60px;
+}
+
+
+/*//body*/
+
+/*Header*/
+
+.logo{
+    width: 20%;
+    height: 20%;
+    text-align:left;    
+}
+
+.estiloTitulo{
+    font-family: 'Poppins', sans-serif;
+	color: rgb(121, 13, 58);
+	text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+	font-size: 3em;
+	letter-spacing: 15px;
+    text-align: center;
+}
+
+.estiloSubtitulo{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    letter-spacing: 6px;
+    margin-bottom:5%;
+}
+
+.navegacion{
+    width: 100%;
+    margin: auto;
+    background: rgba(136, 66, 95, 0.966);
+    text-align: center;
+}
+
+.nav-item {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(180, 133, 149, 0.774);
+    letter-spacing: 0.0625em;
+}
+
+.navegacion ul{
+    list-style: none;
+    display: inline-block;
+    padding: 0.4px;  
+}
+
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a{
+    display: block;
+    padding: 15px 20px;
+    
+    color: rgb(201, 170, 182);
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+}
+
+.menu > li > a:hover{
+    color:rgba(158, 122, 139, 0.959);
+    transition: all .3s;
+}
+
+/*//header*/
+
+
+
+/*footer*/
+
+a:link {
+	color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:visited {
+	color:  rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+	color: pink;
+    text-decoration: none;
+}
+a:active {
+	color:  rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.footer{
+    background: rgba(136, 66, 95, 0.966);
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    bottom: 0;
+    display:inline-block;
+    clear:both;
+}
+
+.todoFooter{
+    display: grid;
+}
+
+.cuerpo{
+    display: block;
+    justify-content:space-between;
+}
+
+.columna1{
+    max-width:400px;
+    float: left;
+    margin-left: 70px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 20px;
+}
+
+.columna1 h1{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 35px;
+    letter-spacing: 2px;
+    
+}
+
+.columna1 p{
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    margin-top: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.columna2{
+    max-width: 400px;
+    float: left;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 70px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.columna2 h1{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 35px;
+    letter-spacing: 2px;
+}
+
+.columna2Label{
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    font-style: normal;
+}
+
+.btn-social {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 100%;
+}
+
+.boton {
+    border-right: 0;
+}
+
+.fa-phone{
+    border-right: 0;
+}
+
+.fa:hover{
+    opacity: 0.7;
+}
+
+.fa-facebook{
+    background:#00000000;
+    color: rgb(22, 22, 22);
+}
+
+.fa-twitter{
+    background: #00000000;
+    color: rgb(22, 22, 22);
+}
+
+.fa-instagram{
+    background: rgba(0, 0, 0, 0);
+    color: rgb(22, 22, 22);
+}
+
+.columna3{
+    max-width: 400px;
+    float: left;
+    margin-left: 70px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+.columna3 h1{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 35px;
+    letter-spacing: 2px;   
+}
+
+.fila2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.fila2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.fila2 label{
+    margin-left: 0px;
+    max-width: 140px;
+    margin-top: 0px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.cuerpoDebajo{
+    background: rgb(90, 49, 68);
+    position: relative;
+    display: block;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.copyright{
+    color:rgb(236, 195, 219);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.copyright a{
+    text-decoration: none;
+    color:rgb(236, 195, 219);
+    font-size: 13px;
+
+    
+}
+
+/*//footer*/
+
+/*Tinglado HTML*/
+
+.video{
+    width: 50%;
+    height:auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: right;
+}
+.H3titulo{
+    color:rgb(0, 0, 0);
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    text-align: left; 
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.tablaZerkausi{
+    width: 50%;
+    border: 1px solid #000;
+    margin-right: 25%;
+    margin-left: 25%; 
+}
+
+.tablaZerkausi tr, td{
+    width: 25%;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #000;
+    border-spacing: 0;
+    border-collapse:collapse;
+    padding: 0.3em;
+}
+
+.fondoTabla{
+    background: rgb(185, 185, 185);
+}
+
+.mapa{
+    margin-left: 30px;
+    width: 50%;
+}
+
+/*//Tinglado HTML*/
+
+/*Formulario HTML*/
+
+.tablaFormulario{
+    border-color: rgb(148, 168, 223);
+    border-width: 4px;
+}
+
+.formulario{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    padding: 5px 7px 5px 7px;
+    border:2px solid rgb(223,197,148);
+    background:rgb(255, 255, 255);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 15px;
+}
+
+.diseñoFormulario{
+    margin-left: 25%;
+    margin-right: 30%;
+    width: 50%;
+    border: 4px solid rgb(223, 197, 148);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 15px;
+}
+
+.enviar{
+    margin-left: 45%;
+    margin-right: 50%;
+    margin-bottom: 30px;
+    padding: 5px 7px 5px 7px;
+    border:2px solid rgba(223, 197, 148, 0.664);
+    background:rgb(223, 197, 148);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 15px;
+}
+
+input[type=text], [type=email], [type=tel], [type=date], [type=number]{
+    width:40%;
+    height: 30%;
+    font: 14px;
+}
+
+textarea{
+    width: 40%;
+    height: 20%;
+    font: 14px;
+}
+
+input[type=submit]{
+    position: relative;
+    width: 10%;
+    height: 15%;
+    border-radius: 15px;
+    font: 14px;
+}
+
+.H3tituloInscripcion{
+    color:rgb(0, 0, 0);
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    text-align: center; 
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+/*//Formulario HTML
+
+/*Manual*/
+
+.imagenManualHeader{
+    width: 45%;
+    margin-right: 30px;
+    margin-left: 20px;
+    float: right;
+}
+
+.imagenManualBody{
+    width: 35%;
+    margin-right: 20px;
+    margin-left: 30px;
+    float:left;
+}
+
+.imagenManualFooter{
+    width: 50%;
+    margin-right: 30px;
+    margin-left: 20px;
+    float: right;
+}
+
+.imagenManualInicio{
+    width: 85%;
+    margin-right: auto;
+    margin-left: 30px;
+    float: left;
+}
+
+
+.zutabea{
+    float: left;
+    width: 33.33%;
+}
+
+.ilara{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*//Manual*/
