@@ -1,7 +1,7 @@
 <!--output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])-->
 {% extends "base.html" %}
 
-{% block titulo %}Listado de libro por editorial{% endblock %}
+{% block titulo %} Listado de libro por editorial {% endblock %}
 
 {% block contenido %}
 <h2>Listado de libro por editorial</h2>
@@ -18,7 +18,6 @@
         {% else %}
             <p>No hay libros disponibles de la editorial libro2.editorial.nombre</p>
         {% endif %}
-
     {% else %}
     <p>No hay libros disponibles</p>   
     {% endif %}
