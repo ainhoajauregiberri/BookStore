@@ -11,7 +11,7 @@
     
     <li>
         {{ editorial.id }}:
-        <a href= "/appBookStore/editorial/{{ editorial.id }}/libros/">{{ editorial.nombre }}</a>
+        <a href= "{% url 'detallesEditoriales' editorial.id %}">{{ editorial.nombre }}</a>
     </li>
     {% endfor %}
 </ul>

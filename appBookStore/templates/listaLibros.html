@@ -11,7 +11,7 @@
     
     <li>
         {{ libro.id }}: 
-        <a href= "/appBookStore/libro/{{ libro.id }}/autores/">{{ libro.nombre }}</a>
+        <a href= "{% url 'detallesLibro' libro.id %}">{{ libro.nombre }}</a>
     </li>
     {% endfor %}
 </ul>

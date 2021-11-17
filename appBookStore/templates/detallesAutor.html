@@ -15,11 +15,14 @@
             {{ autor.nombre}}
         </li>
         <li>
+            {{ autor.biografia}}
+        </li>
+        <li>
             {% if libros %}
             <ul>
             {% for l in libros %}
                 <li>
-                    <a href= "/appBookStore/libro/{{ l.id }}/autores/">{{ l.nombre }}</a>
+                    <a href= "{% url 'detallesLibro' l.id %}">{{ l.nombre }}</a>
                 </li>
             {% endfor %}
             </ul> 
