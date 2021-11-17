@@ -40,6 +40,7 @@ class Libro(models.Model):
     genero = models.ForeignKey(Genero, on_delete=models.CASCADE)
     idioma = models.ForeignKey(Idioma, on_delete=models.CASCADE)
     paginas = models.IntegerField(default=0)
+    sinopsis = models.CharField(max_length=800)
     def __str__(self):
         return f"{self.id}. {self.nombre}, {self.autores.all()}, {self.editorial}, {self.genero}, {self.idioma}, {self.paginas} páginas"
 
