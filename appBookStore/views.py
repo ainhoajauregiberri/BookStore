@@ -15,7 +15,7 @@ def index(request):
 	librosEd2 = librosEd2.order_by('nombre')
 
 	
-	context = {'libro1': librosEd1, 'libro2': librosEd2}
+	context = {'libro1': librosEd1[0], 'libro2': librosEd2[0]}
 	return render(request, 'index.html', context)
 
 #devuelve la lista de LIBROS
