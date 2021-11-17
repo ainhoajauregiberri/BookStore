@@ -1,19 +1,19 @@
-<html>
-    <head>
-        <title>App Django</title>
+{% extends "base.html" %}
 
-    </head>
-    <body>
-        <h1>App Libros</h1>
-        <h2>Listado de editoriales</h2>
-        <ul>
-            {% for editorial in lista_editoriales %}
-          
-            <li>
-                {{ editorial.id }}:
-                <a href= "/appBookStore/editorial/{{ editorial.id }}/libros/">{{ editorial.nombre }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+ {% block titulo %} Lista de editoriales{% endblock %}
+ 
+ {% block contenido %}
+
+<h1>App Libros</h1>
+<h2>Listado de editoriales</h2>
+<ul>
+    {% for editorial in lista_editoriales %}
+    
+    <li>
+        {{ editorial.id }}:
+        <a href= "/appBookStore/editorial/{{ editorial.id }}/libros/">{{ editorial.nombre }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

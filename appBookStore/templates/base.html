@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <link rel="stylesheet" href="style.css">
         <title>{% block titulo %}Gestor de Libreria{% endblock %}</title>
-        <meta charset='utf-8'>
+        <meta charset="UTF-8">
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name="descripción" content="Página inicial de nuestra biblioteca online">
         <meta name="author" content="IW-Grupo1">
         <meta name="robots" content="index">
         <title>Book Store</title>
-        <link rel="stylesheet" type='text/css' media='screen' href='styles/main.css'>
+        <link rel="stylesheet" type='text/css' media='screen' href="{% static 'css/main.css' %}">
         <link rel="stylesheet" href="styles/bootstrap-social.css">
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -32,21 +33,21 @@
             <section style="background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('irudiak/fondo2.jpg'); background-repeat: no-repeat;"> 
             <div>
                 <img class="logo" src="irudiak/logo-PhotoRoom.png" alt="" Title="logo">
-                <h1 class="estiloTitulo" >BOOK STORE</h1>
+                <h1 class="estiloTitulo" ><a href="http://127.0.0.1:8000/appBookStore/">BOOK STORE</a></h1>
                 <h2 class="estiloSubtitulo">LA <b>LIBRERÍA</b> ONLINE</h2>
     
                 <ul class=" navegacion menu">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="index.html" id="op1">Book Store</a>
+                      <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/appBookStore/" id="op1">Inicio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="listaLibros.html" id="op2">Libros</a>
+                      <a class="nav-link" href="http://127.0.0.1:8000/appBookStore/libro/" id="op2">Libros</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="listaEditoriales.html" id="op3">Editoriales</a>
+                      <a class="nav-link" href="http://127.0.0.1:8000/appBookStore/editorial/" id="op3">Editoriales</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="listaAutores.html" id="op4">Autores</a>
+                      <a class="nav-link" href="http://127.0.0.1:8000/appBookStore/autor/" id="op4">Autores</a>
                     </li>
                   </ul>
     
@@ -87,14 +88,14 @@
                         <div class="fila2"> 
                             <a class="btn btn-social mx-2" href="tel:+34 911793463"><i class="fa fa-phone"></i></a>
                             <label> 
-                            911 79 34 63
+                            <a href="tel:+34 911793463">911 79 34 63</a>
                             </label>
                         </div>
     
                         <div class="fila2"> 
                             <a class="btn btn-social mx-2" href="mailto:alameda@casadellibro.com"><i class="fa fa-envelope"></i></a>
                             <label> 
-                            alameda@casadellibro.com
+                            <a href="mailto:alameda@casadellibro.com">alameda@casadellibro.com</a>
                             </label>
                         </div>
                     </div> 

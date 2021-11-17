@@ -42,6 +42,10 @@ body{
     text-align: center;
 }
 
+.estiloTitulo a:hover{
+    color: rgb(121, 13, 58);
+}
+
 .estiloSubtitulo{
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -440,5 +444,10 @@ input[type=submit]{
     display: table;
     clear: both;
 }
+
+footer a:hover{
+    color:rgb(236, 195, 219);
+}
+
 
 /*//Manual*/
