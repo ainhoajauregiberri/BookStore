@@ -1,24 +1,52 @@
 <!--output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])-->
 {% extends "base.html" %}
+{% load static %}
+
+<script>
+    window.onload=function(){
+    document.getElementById("op1").style.background="white";
+    }
+</script>
 
 {% block titulo %} Listado de libro por editorial {% endblock %}
 
 {% block contenido %}
-<h2>Listado de libro por editorial</h2>
 
-<div class="container conjuntoImagenes">
-    <div class="fila">
-        <div class="argazkiak">
-            <div class="foto">
+
+
+<section>
+
+<h2 class="titulo">Listado de libro por editorial</h2>
+
+
                 <ul>
                     {% if libro1 %}
-                        {% if libro2 %}
-                            <div>
-                                <a href="{% url 'detallesLibro' libro1.id %}">{{ libro1.nombre }}<img src="{"</a>
+                    {% if libro2 %}
+                        <div class="container conjuntoImagenes">
+                            <div class="row">
+
+                                <div class="galeria">
+                                    <div class="foto">
+                                        <div>
+                                            <img src= "{% static 'fotos/1.jpg' %}" alt=""> 
+                                        </div>
+                                        <div class="listaIndice">
+                                            <a href="{% url 'detallesLibro' libro1.id %}">{{ libro1.nombre }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="argazkiak">
+                                    <div class="foto">   
+                                        <div>
+                                            <img src="{% static 'fotos/{{ libro2.id }}.jpg' %}" alt="">
+                                        </div>
+                                        <div class="listaIndice">
+                                            <a href="{% url 'detallesLibro' libro2.id %}">{{ libro2.nombre }}</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <li>
-                                <a href="{% url 'detallesLibro' libro2.id %}">{{ libro2.nombre }}</a>
-                            </li>
+                        </div>
                         {% else %}
                             <p>No hay libros disponibles de la editorial libro2.editorial.nombre</p>
                         {% endif %}
@@ -27,14 +55,7 @@
                     {% endif %}
                             
                 </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
+</section>          
 
 
 {% endblock %}
