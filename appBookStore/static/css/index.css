@@ -1,0 +1,22 @@
+div.argazkiak{
+    margin: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgb(128, 148, 223), 0 6px 20px 0 black;
+    float: left;
+    width: 350px;
+}
+
+div.argazkiak img{
+    width: 100%;
+    height: auto;
+}
+
+div.galeria:hover{
+    border: 1px lightslategray;
+    opacity: 0.5;
+}
+
+div.listaIndice{
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(72, 81, 167);
+    padding: 10px;
+}

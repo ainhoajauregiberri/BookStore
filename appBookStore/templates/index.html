@@ -6,23 +6,35 @@
 {% block contenido %}
 <h2>Listado de libro por editorial</h2>
 
-<ul>
-    {% if libro1 %}
-        {% if libro2 %}
-            <li>
-                <a href="{% url 'detallesLibro' libro1.id %}">{{ libro1.nombre }}</a>
-            </li>
-            <li>
-                <a href="{% url 'detallesLibro' libro2.id %}">{{ libro2.nombre }}</a>
-            </li>
-        {% else %}
-            <p>No hay libros disponibles de la editorial libro2.editorial.nombre</p>
-        {% endif %}
-    {% else %}
-    <p>No hay libros disponibles</p>   
-    {% endif %}
-            
-</ul>
+<div class="container conjuntoImagenes">
+    <div class="fila">
+        <div class="argazkiak">
+            <div class="foto">
+                <ul>
+                    {% if libro1 %}
+                        {% if libro2 %}
+                            <div>
+                                <a href="{% url 'detallesLibro' libro1.id %}">{{ libro1.nombre }}<img src="{"</a>
+                            </div>
+                            <li>
+                                <a href="{% url 'detallesLibro' libro2.id %}">{{ libro2.nombre }}</a>
+                            </li>
+                        {% else %}
+                            <p>No hay libros disponibles de la editorial libro2.editorial.nombre</p>
+                        {% endif %}
+                    {% else %}
+                    <p>No hay libros disponibles</p>   
+                    {% endif %}
+                            
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 {% endblock %}
