@@ -44,6 +44,8 @@ class Libro(models.Model):
     paginas = models.IntegerField(default=0)
     sinopsis = models.CharField(max_length=800)
     fechaPubli = models.DateField()
+    def linkLibro(self):
+        return f"fotos/{self.id}.jpg"
     def __str__(self):
         return f"{self.id}. {self.nombre}, {self.autores.all()}, {self.editorial}, {self.genero}, {self.idioma}, {self.paginas} páginas"
 

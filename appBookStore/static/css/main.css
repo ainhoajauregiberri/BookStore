@@ -30,7 +30,8 @@ body{
 .logo{
     width: 7%;
     height: 7%;
-    text-align:left;    
+    text-align:center;  
+    margin-bottom: 5%;  
 }
 
 .estiloTitulo{
@@ -40,6 +41,7 @@ body{
 	font-size: 3em;
 	letter-spacing: 15px;
     text-align: center;
+    margin-top: 20%;
 }
 
 .estiloTitulo a:hover{

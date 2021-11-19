@@ -8,6 +8,8 @@ h2{
 
 .row{
     text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 .pie{
@@ -18,14 +20,13 @@ h2{
 div.galeria{
     margin: 10px 10px;
     float: left;
-    width: 90%;
-    border: 1px solid rgb(0, 0, 0);
+    width: 40%;
     text-align: center;
     align-items: center;
 }
 
 div.foto img{
-    width:50%;
+    width:100%;
     height: auto;
     margin-top: 5%;
     border-style:outset;

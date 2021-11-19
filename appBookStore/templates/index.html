@@ -4,7 +4,7 @@
 
 
 
-{% block titulo %} Listado de libro por editorial {% endblock %}
+{% block titulo %} ¡Echa un vistazo a las novedades de las editoriales! {% endblock %}
 
 {% block contenido %}
 
@@ -16,18 +16,18 @@
 
 <section>
 
-<h2 class="titulo">Listado de libro por editorial</h2>
+<h2 class="titulo">¡Echa un vistazo a las novedades de las editoriales!</h2>
     <ul>
         {% if libro1 %}
         {% if libro2 %}
         
-            <div class="container conjuntoImagenes">
+            <div class="container conjuntoImagenes"> 
                 <div class="row">
     
                     <div class="galeria">
                         <div class="foto">
                             <div>
-                                <a href="{% url 'detallesLibro' libro1.id %}"><img src= "{% static 'fotos/{{ libro1.id }}.jpg' %}" alt=""></a>
+                                <a href="{% url 'detallesLibro' libro1.id %}"><img src= "{% static 'fotos/1.jpg' %}" alt=""></a>
                             </div>
                         </div>
                         <div class="pie">
