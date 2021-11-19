@@ -1,32 +1,26 @@
-.titulo{
+div{
+    margin-top: 3%;
+    margin-bottom: 0%;
+}
+h2{
     font-family: 'Poppins', sans-serif;
 	color: rgb(121, 13, 58);
-	font-size: 2em;
+	font-size: 3em;
 	letter-spacing: 7px;
     text-align: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
 }
-
-.subtituloH3{
+.tituloH3{
     font-family: 'Poppins', sans-serif;
-	color: rgba(0, 0, 0, 0.493);
+	color: rgb(61, 61, 61);
 	font-size: 1.5em;
 	letter-spacing: 7px;
     text-align: center;
-    margin-top: 0.5%;
-    margin-bottom: 1%;
     font-weight: bold;
-    
 }
 
 .row{
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    size: 80%;
 }
-
 
 .pie{
     text-align: center;
@@ -34,17 +28,17 @@
 
 
 div.galeria{
-    margin: 10px 10px;
     float: left;
-    width: 40%;
+    width: 30%;
     text-align: center;
     align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 div.foto img{
     width:100%;
     height: auto;
-    margin-top: 0%;
     border-style:outset;
     border-color: black;
     align-items: center;
@@ -63,7 +57,11 @@ div.galeria:hover{
 }
 
 div.pie{
-    text-align: center;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
+	color: rgb(61, 61, 61);
+	font-size: 0.8em;
+	letter-spacing: 7px;
+    text-align: center;
 }
+

@@ -1,0 +1,18 @@
+.portada{
+    width:100%;
+    height: auto;
+    border-style:outset;
+    border-color: black;
+    align-items: center;
+    text-align: center;
+    border-left: 20%;
+    border-right: 20%;    
+}
+
+div.detallesLibro{
+    font-family: 'Poppins', sans-serif;
+	color: rgb(121, 13, 58);
+	font-size: 3em;
+	letter-spacing: 7px;
+    text-align: center;
+}
