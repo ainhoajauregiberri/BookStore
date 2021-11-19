@@ -2,21 +2,37 @@ h2{
     font-family: 'Poppins', sans-serif;
 	color: rgb(121, 13, 58);
 	font-size: 3em;
-	letter-spacing: 15px;
+	letter-spacing: 7px;
     text-align: center;
 }
+
+.row{
+    text-align: center;
+}
+
+.pie{
+    text-align: center;
+}
+
 
 div.galeria{
     margin: 10px 10px;
     float: left;
-    width: 350px;
+    width: 90%;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    align-items: center;
 }
 
 div.foto img{
-    width:30%;
+    width:50%;
     height: auto;
     margin-top: 5%;
+    border-style:outset;
+    border-color: black;
     align-items: center;
+    text-align: center;
+   
 }
 
 div.galeria:hover{
@@ -24,7 +40,12 @@ div.galeria:hover{
     opacity: 0.5;
 }
 
-div.listaIndice{
+.borde{
+    border-style: outset;
+    border-color: black;
+}
+
+div.pie{
     text-align: center;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
