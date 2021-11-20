@@ -22,7 +22,6 @@ class Editorial(models.Model):
     def __str__(self):
         return f"{self.id}. {self.nombre}"
 	
-
 class Genero(models.Model):
     nombre = models.CharField(max_length=50)
 # Campo para la relación one-to-many
@@ -46,6 +45,7 @@ class Libro(models.Model):
     paginas = models.IntegerField(default=0)
     sinopsis = models.CharField(max_length=800)
     fechaPubli = models.DateField()
+    
     imagenLink = models.CharField(max_length=800)
     def linkLibro(self):
         return f"fotos/{self.id}.jpg"

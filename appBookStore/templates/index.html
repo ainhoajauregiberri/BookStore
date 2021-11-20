@@ -20,14 +20,22 @@
         
             <div class="container conjuntoImagenes"> 
                 <div class="row">
-    
                     <div class="galeria">
                         <div>
                             <h3 class="tituloH3">PLANETA DEL LIBRO</h3>
                         </div>
+                    </div>
+                    <div class="galeria">
+                        <div>
+                            <h3 class="tituloH3">EREIN</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="galeria">
                         <div class="foto">
                             <div>
-                                <a href="{% url 'detallesLibro' libro1.id %}"><img src= libro1.imagenLink alt=""></a>
+                                <a href="{% url 'detallesLibro' libro1.id %}"> <img src= "{{ libro1.linkLibro }}"></a>
                             </div>
                         </div>
                         <div class="pie">
@@ -38,12 +46,9 @@
                     </div>
     
                     <div class="galeria">
-                        <div>
-                            <h3 class="tituloH3">EREIN</h3>
-                        </div>
                         <div class="foto">
                             <div> 
-                                <a href="{% url 'detallesLibro' libro2.id %}"><img src= libro2.imagenLink alt=""></a>
+                                <a href="{% url 'detallesLibro' libro2.id %}"><img src= "https://m.media-amazon.com/images/I/716toSJKbvL._AC_UL480_FMwebp_QL65_.jpg" alt=""></a>
                             </div>
                         </div>
                         <div class="pie">
