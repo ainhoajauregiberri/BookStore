@@ -18,11 +18,16 @@ h2{
     font-weight: bold;
 }
 
-.row{
-    text-align: center;
+div.row{
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-top: 5%;
 }
 
-.pie{
+div.pie{
     text-align: center;
 }
 
@@ -38,12 +43,7 @@ div.galeria{
 
 div.foto img{
     width:100%;
-    height: auto;
-    border-style:outset;
-    border-color: black;
-    align-items: center;
-    text-align: center;
-   
+    height: auto; 
 }
 
 div.galeria:hover{

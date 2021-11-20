@@ -1,5 +1,7 @@
 <!--output = ', '.join([str(autor.id), autor.nombre, str([l.nombre for l in autor.libro_set.all()])])-->
+
 {% extends "base.html" %}
+{% load static %}
 
 {% block titulo %} Detalle del autor {% endblock %}
 
@@ -13,34 +15,47 @@
 
 <h2>Datos del autor</h2>
 
-{% if autor %}
-    <ul>
-        <li>
-            {{ autor.id}}
-        </li>
-        <li>
-            {{ autor.nombre}}
-        </li>
-        <li>
-            {{ autor.biografia}}
-        </li>
-        <li>
-            {% if libros %}
-            <ul>
-            {% for l in libros %}
-                <li>
-                    <a href= "{% url 'detallesLibro' l.id %}">{{ l.nombre }}</a>
-                </li>
-            {% endfor %}
-            </ul> 
-            {% else %}
-                <p>El autor {{autor.nombre}} no tiene libros</p>
-
-            {% endif %}
-        </li>
-    </ul>
-{% else %}
-    <p>No existe este autor.</p>
-{% endif %}
-
+    <div class="ila">
+        <div class="zuta">
+            <div>
+                <img src= "{% static 'fotosAutor/1.jpg' %}" class="portada" alt="">
+            </div>
+            
+        </div>
+        <div class="zuta">
+            <h3 class="tituloLibro">  {{ autor.nombre }}</h3>
+            <br>
+                {% if autor %}
+                    <div>
+                        <h4 class="infoTitulos"> Número de identificación:</h4>
+                            <p class="texto">
+                                Este es el autor número {{ autor.id }} de la biblioteca Bookstore.
+                            </p>
+                            <br>
+                        <h4 class="infoTitulos"> Biografía:</h4>
+                            <p class="texto">
+                                {{ autor.biografia }}
+                            </p>
+                            <br>
+                        <h4 class="infoTitulos"> Libros escritos:</h4>
+                            <p class="texto">
+                                {% if libros %}
+                                {% for l in libros %}
+                                    <li>
+                                        <a href= "{% url 'detallesLibro' l.id %}">{{ l.nombre }}</a>
+                                    </li>
+                                {% endfor %}
+                                </ul> 
+                                {% else %}
+                                    <p>El autor {{ autor.nombre }} no tiene libros</p>
+                    
+                                {% endif %}
+                            </p>  
+                            <br>
+                    </div>
+                    {% else %}
+                        <p class="texto">No existe este autor.</p>
+                    {% endif %}
+        </div>
+    </div>
 {% endblock %}

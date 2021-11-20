@@ -2,6 +2,8 @@
 <!--output = ', '.join([str(editorial.id), editorial.nombre, str([l.nombre for l in editorial.libro_set.all()])])-->
 
 {% extends "base.html" %}
+{% load static %}
+
 
 {% block titulo %} Detalle de la editorial {% endblock %}
 
@@ -15,33 +17,45 @@
 
 <h2>Datos de la editorial</h2>
 
-{% if editorial %}
-    <ul>
-        <li>
-            {{ editorial.id}}
-        </li>
-        <li>
-            {{ editorial.nombre}}
-        </li>
-        <li>
-            {{ editorial.explicacion}}
-        </li>
-        <li>
-            {% if libros %}
-            <ul>
-            {% for l in libros %}
-                <li>
-                    <a href= "{% url 'detallesLibro' l.id %}">{{ l.nombre }}</a>
-                </li>
-            {% endfor %}
-            </ul> 
-            {% else %}
-                <p>La editorial {{editorial.nombre}} no tiene libros</p>
-            {% endif %}
-        </li>
-    </ul>
-{% else %}
-    <p>No existe esta editorial.</p>
-{% endif %}
-
+    <div class="ila">
+        <div class="zuta">
+            <div>
+                <img src= "{% static 'fotosEditorial/1.jpg' %}" class="portada" alt="">
+            </div>
+            
+        </div>
+        <div class="zuta">
+            <h3 class="tituloLibro">  {{ editorial.nombre }}</h3>
+            <br>
+                {% if editorial %}
+                    <div>
+                        <h4 class="infoTitulos"> Número de la editorial:</h4>
+                            <p class="texto">
+                                Esta es la editorial número {{ editorial.id }} de la biblioteca Bookstore.
+                            </p>
+                            <br>
+                        <h4 class="infoTitulos"> Explicación:</h4>
+                            <p class="texto">
+                                {{ editorial.explicacion }}
+                            </p>
+                            <br>
+                        <h4 class="infoTitulos"> Libros de la editorial:</h4>
+                            <p class="texto">
+                                {% if libros %}
+                                {% for l in libros %}
+                                    <li>
+                                        <a href= "{% url 'detallesLibro' l.id %}">{{ l.nombre }}</a>
+                                    </li>
+                                {% endfor %}
+                                {% else %}
+                                    <p>La editorial {{editorial.nombre}} no tiene libros</p>
+                                {% endif %}
+                            </p>  
+                            <br>
+                    </div>
+                    {% else %}
+                        <p class="texto">No existe esta editorial.</p>
+                    {% endif %}
+        </div>
+    </div>
 {% endblock %}
