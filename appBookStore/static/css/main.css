@@ -30,9 +30,10 @@ body{
 .logo{
     width: 5%;
     height: 5%;
-    margin-left: 48.5%;
-    margin-right: 48.5%;
-    margin-bottom: 3%; 
+    margin-left: 47.5%;
+    margin-right: 47.5%;
+    margin-bottom: 2%; 
+    margin-top: -0.3%;
     
 }
 
@@ -57,7 +58,6 @@ body{
     text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
     font-size: 1em;
     letter-spacing: 6px;
-    margin-bottom:3%;
 }
 
 .navegacion{

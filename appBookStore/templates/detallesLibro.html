@@ -15,56 +15,53 @@
 
 <h2>Datos del libro</h2>
 
-
-
- 
-
- 
- {% if libro %}
-
- <div>
-    
-    <img src= "{% static 'fotos/1.jpg' %}" class="portada" alt="">
-   
-    <p class="detallesLibro">
-        {{ libro.nombre}}
-    </p>
-    <p class="detallesLibro">
-        Este es el libro número {{ libro.id}} de la biblioteca Bookstore
-    </p>
-    <p class="detallesLibro">
-        Fue publicado por:
-        <br>
-        
-    </p>
-
-</div>
-
-
-    
-         <li>
-            {{ libro.fechaPubli |date:'d-m-Y'}}
-        </li>
-         <li>
-            {{ libro.sinopsis}}
-        </li>
-         <li>
-             {% if autores %}
-             <ul>
-             {% for a in autores %}
-                 <li>
-                     <a href= "{% url 'detallesAutores' a.id %}">{{ a.nombre }}</a>
-                 </li>
-             {% endfor %}
-             </ul> 
-             {% else %}
-                 <p>No se dispone de la información del autor del libro {{editorial.nombre}}</p>
-             {% endif %}
-         </li>
-     </ul>
- {% else %}
-     <p>No se dispone de la información del autor del libro {{editorial.nombre}}</p>
- {% endif %}
- 
+    <div class="ila">
+        <div class="zuta">
+            <div>
+                <img src= "{% static 'fotos/2.jpg' %}" class="portada" alt="">
+            </div>
+            
+        </div>
+        <div class="zuta">
+            <h3 class="tituloLibro"> {{ libro.nombre}}</h3>
+            <br>
+                {% if libro %}
+                    <div>
+                        <h4 class="infoTitulos"> Número de libro:</h4>
+                            <p class="texto">
+                                Este es el libro número {{ libro.id}} de la biblioteca Bookstore.
+                            </p>
+                            <br>
+                        <h4 class="infoTitulos"> Fecha de publicación:</h4>
+                            <p class="texto">
+                                Fue publicado el  {{ libro.fechaPubli |date:'d-m-Y'}}.
+                            </p>
+                            <br>
+                        <h4 class="infoTitulos"> Autor/es:</h4>
+                            <p class="texto">
+                                {% if autores %}
+                                    {% for a in autores %}
+                                    <li>
+                                        <p class="texto">
+                                        <a href= "{% url 'detallesAutores' a.id %}">{{ a.nombre }}</a>
+                                        </p>
+                                    </li>
+                                    {% endfor %}
+                                    {% else %}
+                                        <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
+                                    {% endif %}
+                            </p>  
+                            <br>
+                        <h4 class="infoTitulos"> Sinopsis:</h4>
+                            <p class="texto">
+                                {{ libro.sinopsis}}
+                            </p>
+                            <br>
+                    </div>
+                    {% else %}
+                        <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
+                {% endif %}
+        </div>
+    </div>
  {% endblock %}
 

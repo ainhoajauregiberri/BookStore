@@ -1,18 +1,60 @@
-.portada{
-    width:100%;
-    height: auto;
-    border-style:outset;
-    border-color: black;
-    align-items: center;
-    text-align: center;
-    border-left: 20%;
-    border-right: 20%;    
-}
 
-div.detallesLibro{
+ 
+
+.tituloLibro{
     font-family: 'Poppins', sans-serif;
 	color: rgb(121, 13, 58);
-	font-size: 3em;
-	letter-spacing: 7px;
+	font-size: 1.5em;
+	letter-spacing: 3px;
     text-align: center;
+    font-weight: bold;
+}
+
+.infoTitulos{
+    font-family: 'Poppins', sans-serif;
+	color: rgb(0, 0, 0);
+	font-size: 1em;
+	letter-spacing: 3px;
+    text-align: left;
+    font-weight: bold;
+}
+
+img{
+
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+p.texto{
+    font-family: 'Poppins', sans-serif;
+	color: rgb(0, 0, 0);
+	font-size: 0.8em;
+	letter-spacing: px;
+    text-align:justify;
+
+}
+
+.zuta{
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: black;
+    width: 40%;
+}
+
+.ila{
+    content: "";
+    display: table;
+    clear: both;
+    border: black;
+    background-color: rgba(121, 13, 58, 0.151);
+    width: 80%;
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+li{
+    list-style: none;
 }
