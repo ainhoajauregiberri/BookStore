@@ -35,7 +35,7 @@
                     <div class="galeria">
                         <div class="foto">
                             <div>
-                                <a href="{% url 'detallesLibro' libro1.id %}"> <img src= "{{ libro1.linkLibro }}"></a>
+                                <a href="{% url 'detallesLibro' libro1.id %}"><img src= {{ libro1.imagenLink }} alt=""></a>
                             </div>
                         </div>
                         <div class="pie">
@@ -48,7 +48,7 @@
                     <div class="galeria">
                         <div class="foto">
                             <div> 
-                                <a href="{% url 'detallesLibro' libro2.id %}"><img src= "https://m.media-amazon.com/images/I/716toSJKbvL._AC_UL480_FMwebp_QL65_.jpg" alt=""></a>
+                                <a href="{% url 'detallesLibro' libro2.id %}"><img src= {{ libro2.imagenLink }} alt=""></a>
                             </div>
                         </div>
                         <div class="pie">
