@@ -13,12 +13,25 @@
 <h1>App Libros</h1>
 <h2>Listado de editoriales</h2>
 <ul>
+    <div class="container conjuntoImagenes"> 
     {% for editorial in lista_editoriales %}
     
-    <li>
-        {{ editorial.id }}:
-        <a href= "{% url 'detallesEditoriales' editorial.id %}">{{ editorial.nombre }}</a>
-    </li>
+        <div class="row">
+            <div class="galeria">
+                <div>
+                    <h3 class="tituloH3">{{editorial.nombre}}</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="galeria">
+                <div class="foto">
+                    <div>
+                        <a href="{% url 'detallesEditoriales' editorial.id %}"><img src= {{ editorial.imagenLink }} alt=""></a>
+                    </div>
+                </div>
     {% endfor %}
 </ul>
 
