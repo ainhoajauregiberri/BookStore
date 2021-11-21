@@ -18,6 +18,7 @@
     <li>
         {{ autor.id }}: 
         <a href= "{% url 'detallesAutores' autor.id %}">{{ autor.nombre }}</a>
+        <img src= {{ autor.imagenLink }} class="autor" alt="">
     </li>
     {% endfor %}
 </ul>
