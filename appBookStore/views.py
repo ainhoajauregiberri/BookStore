@@ -8,11 +8,11 @@ from .models import Autor, Genero, Idioma, Editorial, Libro
 def index(request):
 	editorial1 = Editorial.objects.get(pk=1)
 	librosEd1 = editorial1.libro_set.all()
-	librosEd1 = librosEd1.order_by('fechaPubli')
+	librosEd1 = librosEd1.order_by('fechaPubli').reverse()
 
 	editorial2 = Editorial.objects.get(pk=2)
 	librosEd2 = editorial2.libro_set.all()
-	librosEd2 = librosEd2.order_by('fechaPubli')
+	librosEd2 = librosEd2.order_by('fechaPubli').reverse()
 
 	
 	context = {'libro1': librosEd1[0], 'libro2': librosEd2[0]}
