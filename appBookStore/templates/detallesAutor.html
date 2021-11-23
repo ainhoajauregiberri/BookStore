@@ -38,19 +38,21 @@
                             </p>
                             <br>
                         <h4 class="infoTitulos"> Libros escritos:</h4>
-                            <p class="texto">
+                                
+                            <div class="texto">
                                 {% if libros %}
                                 {% for l in libros %}
+                                <ul>
                                     <li>
                                         <a href= "{% url 'detallesLibro' l.id %}">{{ l.nombre }}</a>
                                     </li>
-                                {% endfor %}
-                                </ul> 
+                                </ul>
+                                {% endfor %} 
                                 {% else %}
                                     <p>El autor {{ autor.nombre }} no tiene libros</p>
                     
                                 {% endif %}
-                            </p>  
+                              </div>
                             <br>
                     </div>
                     {% else %}

@@ -1,25 +1,30 @@
-{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="es">
+
+
+    
+
     <head>
+       
         <link rel="stylesheet" href="style.css">
-        <title>{% block titulo %}Gestor de Libreria{% endblock %}</title>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"/>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name="descripción" content="Página inicial de nuestra biblioteca online">
         <meta name="author" content="IW-Grupo1">
         <meta name="robots" content="index">
         <title>Book Store</title>
+        {% load static %}
         <link rel="stylesheet" type='text/css' media='screen' href="{% static 'css/main.css' %}">
         <link rel="stylesheet" type='text/css' media='screen' href="{% static 'css/index.css' %}">
         <link rel="stylesheet" type='text/css' media='screen' href="{% static 'css/listaLibros.css' %}">
-        <link rel="stylesheet" type='text/css' media='screen' href="{% static 'css/detallesEditorial.css' %}">
         <link rel="stylesheet" type='text/css' media='screen' href="{% static 'css/detallesLibro.css' %}">
         <link rel="stylesheet" type='text/css' media='screen' href="{% static 'css/listaAutores.css' %}">
         <link rel="stylesheet" type='text/css' media='screen' href="{% static 'css/listaEditorial.css' %}">
         <link rel="stylesheet" href="{% static 'fotos'%}">
         <link rel="stylesheet" href="styles/bootstrap-social.css">
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" >
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
