@@ -11,14 +11,23 @@
 </script>
 <h2>Listado de autores</h2>
 <ul>
-    {% for autor in lista_autores %}
-    
-    <li>
-        {{ autor.id }}: 
-        <a href= "{% url 'detallesAutores' autor.id %}">{{ autor.nombre }}</a>
-        <img src= {{ autor.imagenLink }} class="autor" alt="">
-    </li>
+   
+    <div class="container conjuntoImagenes"> 
+        {% for autor in lista_autores %}
+            <div class="galeria">
+                <div class="pie">
+                    <div>
+                        <a href="{% url 'detallesAutores' autor.id %}">{{ autor.nombre }}</a>
+                    </div>
+                </div>
+                <div class="foto">
+                    <div>
+                        <a href="{% url 'detallesAutores' autor.id %}"><img src= {{ autor.imagenLink }} alt=""></a>
+                    </div>
+                </div>
+            </div> 
     {% endfor %}
-</ul>
+    </div>
+
 
 {% endblock %}
