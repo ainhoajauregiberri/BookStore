@@ -1,6 +1,6 @@
 .tituloLibro{
     font-family: 'Poppins', sans-serif;
-	color: rgb(121, 13, 58);
+	color:rgb(121, 13, 58);
 	font-size: 1.5em;
 	letter-spacing: 3px;
     text-align: center;
@@ -52,6 +52,6 @@ p.texto{
     margin-right: 10%;
 }
 
-.tituloLibro br ul li a:hover{
+.azpiZuta ul li a:hover{
     color: white;
 }
