@@ -17,8 +17,10 @@
     
         <div class="row">
             <div class="galeria">
-                <div>
-                    <h3 class="tituloH3">{{editorial.nombre}}</h3>
+                <div class="pie">
+                    <div>
+                        <a href="{% url 'detallesEditoriales' editorial.id %}">{{ editorial.nombre }}</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,7 +33,10 @@
                         <a href="{% url 'detallesEditoriales' editorial.id %}"><img src= {{ editorial.imagenLink }} alt=""></a>
                     </div>
                 </div>
+            </div>
+        </div>
     {% endfor %}
+     </div>
 </ul>
 
 {% endblock %}

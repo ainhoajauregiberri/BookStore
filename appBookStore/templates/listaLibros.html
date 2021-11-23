@@ -11,26 +11,29 @@
 </script>
 <h2>Listado de libros</h2>
 <ul>
-    <div class="container conjuntoImagenes"> 
-    {% for libro in lista_libros %}
-    <div class="row">
-        <div class="galeria">
-            <div>
-                <h3 class="tituloH3">{{libro.nombre}}</h3>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="galeria">
-            <div class="foto">
-                <div>
-                    <a href="{% url 'detallesLibro' libro.id %}"><img src= {{ libro.imagenLink }} alt=""></a>
+    <div class="container conjuntoImagenes">
+        <div class="row"> 
+        {% for libro in lista_libros %}
+            <div class="galeria">
+                <div class="pie">
+                    <div>
+                        <a href="{% url 'detallesLibro' libro.id %}">{{ libro.nombre }}</a>
+                    </div>
                 </div>
             </div>
-    {% endfor %}
+
+            <div class="galeria">
+                <div class="foto">
+                    <div>
+                        <a href="{% url 'detallesLibro' libro.id %}"><img src= {{ libro.imagenLink }} alt=""></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
 </ul>
+
 
 
 {% endblock %}
