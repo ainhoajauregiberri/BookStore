@@ -41,11 +41,13 @@
                             <p class="texto">
                                 {% if autores %}
                                     {% for a in autores %}
+                                    <ul>
                                     <li>
                                         <p class="texto">
                                         <a href= "{% url 'detallesAutores' a.id %}">{{ a.nombre }}</a>
                                         </p>
                                     </li>
+                                </ul>
                                     {% endfor %}
                                     {% else %}
                                         <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>

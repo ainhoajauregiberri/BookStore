@@ -52,3 +52,6 @@ p.texto{
     margin-right: 10%;
 }
 
+.tituloLibro br ul li a:hover{
+    color: white;
+}
