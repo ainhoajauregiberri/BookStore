@@ -13,29 +13,31 @@
 <h2>Listado de editoriales</h2>
 <ul>
     <div class="container conjuntoImagenes"> 
-    {% for editorial in lista_editoriales %}
-    
         <div class="row">
-            <div class="galeria">
-                <div class="pie">
-                    <div>
-                        <a href="{% url 'detallesEditoriales' editorial.id %}">{{ editorial.nombre }}</a>
+        {% for editorial in lista_editoriales %}
+        
+            
+                <div class="galeria">
+                    <div class="pie">
+                        <div>
+                            <a href="{% url 'detallesEditoriales' editorial.id %}">{{ editorial.nombre }}</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                
+            
 
 
-        <div class="row">
-            <div class="galeria">
-                <div class="foto">
-                    <div>
-                        <a href="{% url 'detallesEditoriales' editorial.id %}"><img src= {{ editorial.imagenLink }} alt=""></a>
+            
+                
+                    <div class="foto">
+                        <div>
+                            <a href="{% url 'detallesEditoriales' editorial.id %}"><img src= {{ editorial.imagenLink }} alt=""></a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            
+        {% endfor %}
         </div>
-    {% endfor %}
      </div>
 </ul>
 
