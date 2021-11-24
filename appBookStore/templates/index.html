@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block titulo %} ¡Echa un vistazo a las novedades de las editoriales! {% endblock %}
+{% block titulo %} ¡Las últimas novedades de las editoriales!{% endblock %}
 
 {% block contenido %}
 
@@ -13,7 +13,7 @@
 </script>
 
 <section>
-<h2 class="titulo">¡Las últimas novedades de las editoriales!</h2>
+
     <ul>
         {% if libro1 %}
         {% if libro2 %}
@@ -21,23 +21,23 @@
         
             <div class="container conjuntoImagenes"> 
                 <div class="row">
-                    {% for editorial in lista_editoriales %}
+                    
                     <div class="galeria">
                         <div class="pie">
                             <div>
-                                <a href="{% url 'detallesEditoriales' editorial.id %}">{{ editorial.nombre }}</a>
-                               <!-- <a href="{% url 'detallesLibro' libro1.id %}">PLANETA DEL LIBRO</a>-->
+                                
+                                <a href="{% url 'detallesEditoriales' 1 %}">PLANETA DEL LIBRO</a>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
-                    <!--
+                    
+                    
                     <div class="galeria">
                         <div class="pie">
-                            <a href="{% url 'detallesLibro' libro2.id %}">EREIN</a>
+                            <a href="{% url 'detallesEditoriales' 2 %}">EREIN</a>
                         </div>
                     </div>
-                    -->
+                    
                 </div>
                     <div class="galeria">
                         <div class="foto">

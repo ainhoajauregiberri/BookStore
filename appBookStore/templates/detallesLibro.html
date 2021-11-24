@@ -26,7 +26,7 @@
             <h3 class="tituloLibro"> {{ libro.nombre}}</h3>
             <br>
                 {% if libro %}
-                    <div>
+                     <div class="azpiZuta">
                         <h4 class="infoTitulos"> Número de libro:</h4>
                             <p class="texto">
                                 Este es el libro número {{ libro.id}} de la biblioteca Bookstore.
@@ -47,7 +47,7 @@
                                         <a href= "{% url 'detallesAutores' a.id %}">{{ a.nombre }}</a>
                                         </p>
                                     </li>
-                                </ul>
+                                    </ul>
                                     {% endfor %}
                                     {% else %}
                                         <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
