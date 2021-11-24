@@ -42,12 +42,13 @@ div.galeria{
     align-items: center;
     margin-left: 3%;
     margin-right: 3%;
+    
 }
 
 div.foto img{
     /*Contenedor dentro de contenedor de las fotos de index, la imagen*/
     width:100%;
-    height: auto; 
+    height: 1000px;
 }
 
   /*Anadir hover de todo el div y borrar justo el de debajo*/
@@ -77,4 +78,5 @@ div.pie{
     text-align: center;
     margin-bottom: -10%;
     margin-top: 5%;
+    height: 300px;
 }
