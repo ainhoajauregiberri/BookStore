@@ -24,6 +24,21 @@ h2{
     font-weight: bold;
 }
 
+div#subtitulo{
+    /*Titulos de libros, autores,...*/
+   font-family: 'Poppins', sans-serif;
+   color:rgb(121, 13, 58);
+   font-size: 1.5em;
+   letter-spacing: 7px;
+   text-align: center;
+   font-weight: bold;
+   margin-top: 40px;
+   margin-bottom: 30px;
+}
+
+
+
+
 div.row{
     /*En index las dos filas, una de titulos y otra de fotos*/
     content: "";
@@ -53,6 +68,16 @@ div.galeriaEditorial{
     align-items: center;
     margin-left: 10%;
     margin-right: 10%;
+    
+}
+div.galeriaIndex{
+    /*Contenedor de las fotos de index*/
+    float: left;
+    width: 150px;
+    text-align: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
     
 }
 
@@ -138,5 +163,21 @@ div.pieEditorial{
     height: 120px;
     margin-right: 10px;
     margin-left: 10px;
+    width: 100%;
+}
+
+div.pieIndex{
+    /*Nombre del libro novedad de la editorial en index */
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+	color: rgb(61, 61, 61);
+	font-size: 0.8em;
+	letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: -10%;
+    margin-top: 5%;
+    height: 70px;
+    margin-right: 32px;
+    margin-left: 32px;
     width: 100%;
 }
