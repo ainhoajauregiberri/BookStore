@@ -21,18 +21,23 @@
         
             <div class="container conjuntoImagenes"> 
                 <div class="row">
+                    {% for editorial in lista_editoriales %}
                     <div class="galeria">
                         <div class="pie">
                             <div>
-                                <a href="{% url 'detallesLibro' libro1.id %}">PLANETA DEL LIBRO</a>
+                                <a href="{% url 'detallesEditoriales' editorial.id %}">{{ editorial.nombre }}</a>
+                               <!-- <a href="{% url 'detallesLibro' libro1.id %}">PLANETA DEL LIBRO</a>-->
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
+                    <!--
                     <div class="galeria">
                         <div class="pie">
                             <a href="{% url 'detallesLibro' libro2.id %}">EREIN</a>
                         </div>
                     </div>
+                    -->
                 </div>
                     <div class="galeria">
                         <div class="foto">
