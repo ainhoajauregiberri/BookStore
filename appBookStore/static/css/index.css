@@ -37,11 +37,11 @@ div.row{
 div.galeria{
     /*Contenedor de las fotos de index*/
     float: left;
-    width: 30%;
+    width: 150px;
     text-align: center;
     align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 div.foto img{
