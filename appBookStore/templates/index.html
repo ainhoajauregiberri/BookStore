@@ -22,48 +22,42 @@
             <div class="container conjuntoImagenes"> 
                 <div class="row">
                     
-                    <div class="galeria">
-                        <div class="pie">
+                    <div class="galeriaEditorial">
+                        <div class="pieEditorial">
                             <div>
                                 
                                 <a href="{% url 'detallesEditoriales' 1 %}">PLANETA DEL LIBRO</a>
                             </div>
                         </div>
-                    </div>
-                    
-                    
-                    <div class="galeria">
-                        <div class="pie">
-                            <a href="{% url 'detallesEditoriales' 2 %}">EREIN</a>
-                        </div>
-                    </div>
-                    
-                </div>
-                    <div class="galeria">
                         <div class="foto">
                             <div>
                                 <a href="{% url 'detallesLibro' libro1.id %}"><img src= {{ libro1.imagenLink }} alt=""></a>
                             </div>
                         </div>
-                        <div class="pie">
+                        <div class="pieEditorial">
                             <div>
                                 <a href="{% url 'detallesLibro' libro1.id %}">{{ libro1.nombre }}</a>
                             </div>
                         </div>
                     </div>
-    
-                    <div class="galeria">
+                    
+                    
+                    <div class="galeriaEditorial">
+                        <div class="pieEditorial">
+                            <a href="{% url 'detallesEditoriales' 2 %}">EREIN</a>
+                        </div>
                         <div class="foto">
                             <div> 
                                 <a href="{% url 'detallesLibro' libro2.id %}"><img src= {{ libro2.imagenLink }} alt=""></a>
                             </div>
                         </div>
-                        <div class="pie">
+                        <div class="pieEditorial">
                             <div > 
                                 <a href="{% url 'detallesLibro' libro2.id %}">{{ libro2.nombre }}</a>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
 
 
