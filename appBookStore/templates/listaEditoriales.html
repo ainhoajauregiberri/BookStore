@@ -17,15 +17,15 @@
         {% for editorial in lista_editoriales %}
         
             
-                <div class="galeria">
-                    <div class="pie">
-                        <div>
-                            <a href="{% url 'detallesEditoriales' editorial.id %}">{{ editorial.nombre }}</a>
-                        </div>
-                    </div>
-                    <div class="foto">
+                <div class="galeriaEditorial">
+                    <div class="fotoEditorial">
                         <div>
                             <a href="{% url 'detallesEditoriales' editorial.id %}"><img src= {{ editorial.imagenLink }} alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pieEditorial">
+                        <div>
+                            <a href="{% url 'detallesEditoriales' editorial.id %}">{{ editorial.nombre }}</a>
                         </div>
                     </div>
                 </div>

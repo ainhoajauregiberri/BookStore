@@ -16,14 +16,14 @@
         <div class="row">
         {% for autor in lista_autores %}
             <div class="galeria">
-                <div class="pie">
-                    <div>
-                        <a href="{% url 'detallesAutores' autor.id %}">{{ autor.nombre }}</a>
-                    </div>
-                </div>
-                <div class="foto">
+                <div class="fotoAutor">
                     <div>
                         <a href="{% url 'detallesAutores' autor.id %}"><img src= {{ autor.imagenLink }} alt=""></a>
+                    </div>
+                </div>
+                <div class="pieAutor">
+                    <div>
+                        <a href="{% url 'detallesAutores' autor.id %}">{{ autor.nombre }}</a>
                     </div>
                 </div>
             </div> 
