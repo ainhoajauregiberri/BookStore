@@ -142,11 +142,13 @@ a:active {
 
 .todoFooter{
     display: grid;
+    margin-top: -2%;
 }
 
 .cuerpo{
     display: block;
     justify-content:space-between;
+  
 }
 
 .columna1{
@@ -159,11 +161,14 @@ a:active {
     line-height: 20px;
 }
 
-.columna1 h1{
+
+.columna1 h2{
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     margin-top: 35px;
     letter-spacing: 2px;
+    margin-left: -55%;
+    margin-bottom: 5%;
     
 }
 
@@ -184,19 +189,17 @@ a:active {
     font-size: 13px;
 }
 
-.columna2 h1{
+
+.columna2 h2{
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     margin-top: 35px;
     letter-spacing: 2px;
+    
 }
 
-.columna2Label{
-    font-size: 13px;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
-    color: rgb(0, 0, 0);
-    font-style: normal;
+.columna2 a:hover{
+    color: white;
 }
 
 .btn-social {
@@ -244,11 +247,16 @@ a:active {
     margin-bottom: 20px;
 }
 
-.columna3 h1{
+
+.columna3 h2{
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     margin-top: 35px;
     letter-spacing: 2px;   
+}
+
+.columna3 a:hover{
+    color: white;
 }
 
 .fila2{
@@ -295,167 +303,5 @@ a:active {
 
 /*//footer*/
 
-/*Tinglado HTML*/
-
-.video{
-    width: 50%;
-    height:auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    float: right;
-}
-.H3titulo{
-    color:rgb(0, 0, 0);
-    font-size: 1.5em;
-    font-family: 'Poppins', sans-serif;
-    text-align: left; 
-    margin-left: 30px;
-    margin-bottom: 20px;
-}
-.tablaZerkausi{
-    width: 50%;
-    border: 1px solid #000;
-    margin-right: 25%;
-    margin-left: 25%; 
-}
-
-.tablaZerkausi tr, td{
-    width: 25%;
-    text-align: left;
-    vertical-align: middle;
-    border: 1px solid #000;
-    border-spacing: 0;
-    border-collapse:collapse;
-    padding: 0.3em;
-}
-
-.fondoTabla{
-    background: rgb(185, 185, 185);
-}
-
-.mapa{
-    margin-left: 30px;
-    width: 50%;
-}
-
-/*//Tinglado HTML*/
-
-/*Formulario HTML*/
-
-.tablaFormulario{
-    border-color: rgb(148, 168, 223);
-    border-width: 4px;
-}
-
-.formulario{
-    margin-left: 30px;
-    margin-bottom: 30px;
-    padding: 5px 7px 5px 7px;
-    border:2px solid rgb(223,197,148);
-    background:rgb(255, 255, 255);
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 15px;
-}
-
-.diseñoFormulario{
-    margin-left: 25%;
-    margin-right: 30%;
-    width: 50%;
-    border: 4px solid rgb(223, 197, 148);
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 15px;
-}
-
-.enviar{
-    margin-left: 45%;
-    margin-right: 50%;
-    margin-bottom: 30px;
-    padding: 5px 7px 5px 7px;
-    border:2px solid rgba(223, 197, 148, 0.664);
-    background:rgb(223, 197, 148);
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 15px;
-}
-
-input[type=text], [type=email], [type=tel], [type=date], [type=number]{
-    width:40%;
-    height: 30%;
-    font: 14px;
-}
-
-textarea{
-    width: 40%;
-    height: 20%;
-    font: 14px;
-}
-
-input[type=submit]{
-    position: relative;
-    width: 10%;
-    height: 15%;
-    border-radius: 15px;
-    font: 14px;
-}
-
-.H3tituloInscripcion{
-    color:rgb(0, 0, 0);
-    font-size: 1.5em;
-    font-family: 'Poppins', sans-serif;
-    text-align: center; 
-    margin-left: 30px;
-    margin-bottom: 20px;
-}
-
-/*//Formulario HTML
-
-/*Manual*/
-
-.imagenManualHeader{
-    width: 45%;
-    margin-right: 30px;
-    margin-left: 20px;
-    float: right;
-}
-
-.imagenManualBody{
-    width: 35%;
-    margin-right: 20px;
-    margin-left: 30px;
-    float:left;
-}
-
-.imagenManualFooter{
-    width: 50%;
-    margin-right: 30px;
-    margin-left: 20px;
-    float: right;
-}
-
-.imagenManualInicio{
-    width: 85%;
-    margin-right: auto;
-    margin-left: 30px;
-    float: left;
-}
 
 
-.zutabea{
-    float: left;
-    width: 33.33%;
-}
-
-.ilara{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-footer a:hover{
-    color:rgb(236, 195, 219);
-}
-
-
-/*//Manual*/
