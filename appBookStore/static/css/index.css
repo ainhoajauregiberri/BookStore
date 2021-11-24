@@ -111,6 +111,18 @@ div.galeria:hover{
     opacity: 0.5;
 }
 
+div.galeriaEditorial:hover{
+    /*Al pasar por encima de las imagenes de de index*/
+    border: 1px lightslategray;
+    opacity: 0.5;
+}
+
+div.galeriaIndex:hover{
+    /*Al pasar por encima de las imagenes de de index*/
+    border: 1px lightslategray;
+    opacity: 0.5;
+}
+
 /*
 .borde{
     border-style: outset;

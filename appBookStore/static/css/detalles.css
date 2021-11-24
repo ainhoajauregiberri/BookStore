@@ -53,6 +53,7 @@ p.texto{
     margin-right: 10%;
 }
 
-.azpiZuta ul li a:hover{
-    color: white;
-}
+
+.zuta a:hover{
+    color: rgba(180, 133, 149, 0.774);
+ }

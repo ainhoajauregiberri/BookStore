@@ -119,14 +119,15 @@ a:visited {
 }
 
 
-a:hover {
-	color: pink;
-    text-decoration: none;
-}
+
 a:active {
 	color:  rgb(0, 0, 0);
     text-decoration: none;
 }
+
+.footer a:hover{
+    color: rgba(180, 133, 149, 0.774);
+ }
 
 .footer{
     background: rgba(136, 66, 95, 0.966);
@@ -198,9 +199,6 @@ a:active {
     
 }
 
-.columna2 a:hover{
-    color: white;
-}
 
 .btn-social {
   height: 2.5rem;
@@ -255,9 +253,7 @@ a:active {
     letter-spacing: 2px;   
 }
 
-.columna3 a:hover{
-    color: white;
-}
+
 
 .fila2{
     margin-top: 20px;
