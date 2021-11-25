@@ -39,12 +39,12 @@ body{
     
 }
 
-div.jaja{
-    font-weight: bold;
-    text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+div.izenburu a{
+    color: rgb(121, 13, 58);
+}
 
-
-
+div.izenburu a:hover{
+    color: rgba(180, 133, 149, 0.774);
 }
 .estiloTitulo{
     font-family: 'Poppins', sans-serif;
@@ -215,6 +215,11 @@ a:active {
     margin-right: 50px;
     margin-bottom: 20px;
     font-size: 13px;
+}
+
+
+.columna2 a svg:hover{
+    color: rgba(180, 133, 149, 0.774);
 }
 
 
