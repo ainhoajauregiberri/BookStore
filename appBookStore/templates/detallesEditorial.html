@@ -37,7 +37,7 @@
                             </p>
                             <br>
                         <h4 class="infoTitulos"> Libros de la editorial:</h4>
-                            <p class="texto">
+                            <div class="texto">
                                 {% if libros %}
                                 {% for l in libros %}
                                 <ul>
@@ -49,7 +49,7 @@
                                 {% else %}
                                     <p>La editorial {{editorial.nombre}} no tiene libros</p>
                                 {% endif %}
-                            </p>  
+                            </div>  
                             <br>
                     </div>
                     {% else %}

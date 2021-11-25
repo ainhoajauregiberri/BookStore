@@ -35,7 +35,7 @@
                             </p>
                             <br>
                         <h4 class="infoTitulos"> Autor/es:</h4>
-                            <p class="texto">
+                            <div class="texto">
                                 {% if autores %}
                                     {% for a in autores %}
                                     <ul>
@@ -49,7 +49,7 @@
                                     {% else %}
                                         <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
                                     {% endif %}
-                            </p>  
+                                </div>  
                             <br>
                         <h4 class="infoTitulos"> Sinopsis:</h4>
                             <p class="texto">

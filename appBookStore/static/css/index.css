@@ -55,8 +55,8 @@ div.galeria{
     width: 150px;
     text-align: center;
     align-items: center;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
     
 }
 
@@ -66,8 +66,8 @@ div.galeriaEditorial{
     width: 300px;
     text-align: center;
     align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 11%;
+    margin-right: 11%;
     
 }
 div.galeriaIndex{
@@ -76,8 +76,8 @@ div.galeriaIndex{
     width: 150px;
     text-align: center;
     align-items: center;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 17%;
+    margin-right: 17%;
     
 }
 

@@ -39,9 +39,11 @@ body{
     
 }
 
-.tituloIndex{
+div.jaja{
     font-weight: bold;
-    color: rgba(136, 66, 95, 0.966);
+    text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+
+
 
 }
 .estiloTitulo{
@@ -223,6 +225,9 @@ a:active {
     letter-spacing: 2px;
     
 }
+.fa-facebook i:hover{
+    color: rgba(180, 133, 149, 0.774);
+}
 
 
 .btn-social {
@@ -246,6 +251,7 @@ a:active {
 .fa:hover{
     opacity: 0.7;
 }
+
 
 .fa-facebook{
     background:#00000000;
