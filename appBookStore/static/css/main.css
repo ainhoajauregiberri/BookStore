@@ -129,6 +129,22 @@ a:active {
     color: rgba(180, 133, 149, 0.774);
  }
 
+.pieIndex a:hover{
+    color: rgba(180, 133, 149, 0.774);
+ }
+
+.pie a:hover{
+    color: rgba(180, 133, 149, 0.774);
+ }
+
+.pieEditorial a:hover{
+    color: rgba(180, 133, 149, 0.774);
+ }
+
+.pieAutor a:hover{
+    color: rgba(180, 133, 149, 0.774);
+ }
+ 
 .footer{
     background: rgba(136, 66, 95, 0.966);
     color: rgb(0, 0, 0);
