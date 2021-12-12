@@ -42,32 +42,28 @@ div#subtitulo{
 div.row{
     /*En index las dos filas, una de titulos y otra de fotos*/
     content: "";
-    display: table;
+    display: flex;
+    justify-content: center;
     clear: both;
     width: 100%;
-    float: left;
    
 }
 
 div.galeria{
     /*Contenedor de las fotos de index*/
-    float: left;
+
     width: 150px;
     text-align: center;
     align-items: center;
-    margin-left: 60px;
-    margin-right: 60px;
     
 }
 
 div.galeriaEditorial{
     /*Contenedor de las fotos de index*/
-    float: left;
+
     width: 300px;
     text-align: center;
     align-items: center;
-    margin-left: 11%;
-    margin-right: 11%;
     
 }
 div.galeriaIndex{
