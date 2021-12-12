@@ -180,20 +180,20 @@ a:active {
 }
 
 .columna1{
-    max-width:400px;
+    max-width: 400px;
     float: left;
-    margin-left: 70px;
-    margin-right: 25px;
-    margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
-    line-height: 20px;
+    margin-left: 70px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    font-size: 13px;
 }
 
 
 .columna1 h2{
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
-    margin-top: 35px;
+    margin-top: 15px;
     letter-spacing: 2px;
     margin-left: -55%;
     margin-bottom: 5%;
@@ -203,8 +203,8 @@ a:active {
 .columna1 p{
     font-size: 13px;
     color: rgb(0, 0, 0);
-    margin-top: 0px;
     font-family: 'Poppins', sans-serif;
+    line-height: 20px;
 }
 
 .columna2{
@@ -226,8 +226,9 @@ a:active {
 .columna2 h2{
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
-    margin-top: 35px;
+    margin-top: 15px;
     letter-spacing: 2px;
+    margin-left: -55px;
     
 }
 .fa-facebook i:hover{
@@ -276,24 +277,26 @@ a:active {
 .columna3{
     max-width: 400px;
     float: left;
+    font-family: 'Poppins', sans-serif;
     margin-left: 70px;
-    margin-right: 25px;
-    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    font-size: 13px;
 }
 
 
 .columna3 h2{
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
-    margin-top: 35px;
+    margin-top: 15px;
     letter-spacing: 2px;   
 }
 
 
 
 .fila2{
-    margin-top: 20px;
     display: flex;
+    line-height: 15px;
 }
 
 .fila2 img{
@@ -304,7 +307,7 @@ a:active {
 .fila2 label{
     margin-left: 0px;
     max-width: 140px;
-    margin-top: 0px;
+    margin-top: 10px;
     font-size: 13px;
     font-family: 'Poppins', sans-serif;
 
@@ -316,6 +319,7 @@ a:active {
     display: block;
     justify-content: space-between;
     padding: 20px;
+    width: 100%;
 }
 
 .copyright{
