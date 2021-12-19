@@ -70,15 +70,6 @@ div.detallesClasificacionestrellas{
     border-radius: 20%;
 
 }
-.detallesClasificacionestrellas.botonCalificar :disabled{
-    background-color: silver;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    border: none;
-    border-radius: 20%;
-    
-}
-
 .detallesClasificacionestrellas.fa-star {
     cursor: pointer;
    
