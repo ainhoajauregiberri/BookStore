@@ -16,7 +16,7 @@ html{
 
 /*body*/
 
-body{
+.fondo{
     background-color: white;
     margin-top: -64px;
     height: 100%;
