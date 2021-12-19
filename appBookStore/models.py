@@ -1,8 +1,9 @@
 from django.db import migrations, models
+from django.db.models.lookups import In
 
 
 import django.utils.datetime_safe
-from django.db.models.fields import FloatField
+from django.db.models.fields import FloatField, IntegerField
 
 from datetime import timezone
  
@@ -35,6 +36,15 @@ class Idioma(models.Model):
     def __str__(self):
         return f"{self.id}. {self.nombre}"
 
+
+class Usuario(models.Model):
+ # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
+    nombre = models.CharField(max_length=50)
+    usuario = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
+    def __str__(self):
+        return f"{self.usuario}. {self.password}"
+
 class Libro(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
     nombre = models.CharField(max_length=50)
@@ -45,14 +55,20 @@ class Libro(models.Model):
     paginas = models.IntegerField(default=0)
     sinopsis = models.CharField(max_length=800)
     fechaPubli = models.DateField()
-    
+    mediaValoracion = models.FloatField(default=0)
     imagenLink = models.CharField(max_length=800)
     def linkLibro(self):
         return f"fotos/{self.id}.jpg"
     def __str__(self):
         return f"{self.id}. {self.nombre}, {self.autores.all()}, {self.editorial}, {self.genero}, {self.idioma}, {self.paginas} páginas"
 
-
+class Valoracion(models.Model):
+ # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
+    puntuacion = models.IntegerField
+    def __str__(self):
+        return f"{self.usuario}: {self.puntuacion} ({self.libro})"
 
 
  
