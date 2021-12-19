@@ -98,7 +98,7 @@ div.fotoEditorial img{
   /*Anadir hover de todo el div y borrar justo el de debajo*/
 
 
-div.galeria:hover{
+div.fotoynombre:hover{
     /*Al pasar por encima de las imagenes de de index*/
     border: 1px lightslategray;
     opacity: 0.5;
@@ -132,7 +132,7 @@ div.pie{
 	font-size: 0.8em;
 	letter-spacing: 4px;
     text-align: center;
-    margin-bottom: -10%;
+    margin-bottom: -20%;
     margin-top: 5%;
     height: 120px;
     width: 100%;
@@ -180,4 +180,14 @@ div.pieIndex{
     margin-top: 5%;
     height: 70px;
     width: 100%;
+}
+
+div.clasificacionestrellas{
+    /*estrellas clasificacion*/
+
+    width: 216px;
+    height: 20px;
+    text-align: center;
+    align-items: center;   
+    margin-bottom: 20px;
 }

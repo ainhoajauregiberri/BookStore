@@ -56,3 +56,8 @@ p.texto{
 .zuta a:hover{
     color: rgba(180, 133, 149, 0.774);
  }
+
+div.detallesClasificacionestrellas{
+    text-align: center;
+    margin-bottom: 40px;
+}

@@ -56,11 +56,22 @@
                                 {{ libro.sinopsis}}
                             </p>
                             <br>
+                        <div class="detallesClasificacionestrellas">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            
+                        </div>
                     </div>
                     {% else %}
                         <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
                 {% endif %}
+                
         </div>
+        
     </div>
+
  {% endblock %}
 
