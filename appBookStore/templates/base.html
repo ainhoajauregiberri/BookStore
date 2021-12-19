@@ -36,11 +36,8 @@
         <link rel="icono" href="icono.ico">
     </head>
  
-<<<<<<< HEAD
     <body>
-=======
     <body class="fondo">
->>>>>>> 2f1c979271a259be5d467757838388ac6be7d985
         <form action= "{% url 'set_language' %}" method="post"> {% csrf_token %}
             <input name="next" type="hidden" value= "{{redirect_to }}" />
             <select name = "language">

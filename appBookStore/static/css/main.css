@@ -16,11 +16,8 @@ html{
 
 /*body*/
 
-<<<<<<< HEAD
-body{
-=======
-.fondo{
->>>>>>> 2f1c979271a259be5d467757838388ac6be7d985
+
+body.fondo{
     background-color: white;
     margin-top: -64px;
     height: 100%;
@@ -170,7 +167,7 @@ a:active {
     color: rgb(0, 0, 0);
     line-height: 40px;
     position: relative;
-    margin-top: 100px;
+    margin-top: 0px;
     width: 100%;
     bottom: 0;
     display:inline-block;
