@@ -63,7 +63,10 @@
                             <span class="fa fa-star" onclick="calificar(this)" id="4estrella"></span>
                             <span class="fa fa-star" onclick="calificar(this)" id="5estrella"></span>
                             
-                            <button class="botonCalificar" onclick="Mensaje()" >Calificar</button>
+
+
+	
+    <button class="botonCalificar" style="border:rgb(0, 0, 0);border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" onclick="Mensaje(); calcularMedia()" >Calificar</button>
                             
                         </div>
                         <p class="texto">
@@ -97,12 +100,16 @@
         function Mensaje(){
             alert("¡Gracias por calificar este libro con " +contador+ " estrellas!");
         }
+
+
         var numValoraciones;
         var media=1;
 
         function calcularMedia(){
-            media=((numValoraciones*media)+ contador)/(numValoraciones+1);
+            media=((libro.numValoraciones*media)+ contador)/(libro.numValoraciones+1);
             return media;
+            libro.numValoraciones+=1;
+            return libro.numValoraciones;
         }
 
     </script>

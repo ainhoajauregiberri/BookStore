@@ -62,7 +62,7 @@ div.detallesClasificacionestrellas{
     margin-bottom: 40px;
 }
 
-.detallesClasificacionestrellas.botonCalificar{
+div.detallesClasificacionestrellas.button.botonCalificar{
     margin-left: 50px;
     color: rgba(180, 133, 149, 0.774);
     margin-bottom: 30px;
@@ -70,7 +70,7 @@ div.detallesClasificacionestrellas{
     border-radius: 20%;
 
 }
-.detallesClasificacionestrellas.fa-star {
+.fa-star {
     cursor: pointer;
    
 }
