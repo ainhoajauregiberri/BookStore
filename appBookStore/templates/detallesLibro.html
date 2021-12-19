@@ -66,6 +66,9 @@
                             <button class="botonCalificar" onclick="Mensaje()" >Calificar</button>
                             
                         </div>
+                        <p class="texto">
+                            ({{libro.numValoraciones}})
+                        </p>
                     </div>
                     {% else %}
                         <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
@@ -94,40 +97,12 @@
         function Mensaje(){
             alert("¡Gracias por calificar este libro con " +contador+ " estrellas!");
         }
+        var numValoraciones;
+        var media=1;
 
-
-        var votos5;
-        var votos4;
-        var votos3;
-        var botos2;
-        var botos1;
-        var mediaVotos;
-        var votosTotales;
-
-        function calcularMediaVotos(){
-            if((document.getElementById((i+1)+nombre))===5){
-                votos5+=1;
-            }else if((document.getElementById((i+1)+nombre))===4){
-                votos4+=1;
-                
-            }else if((document.getElementById((i+1)+nombre))===3){
-                votos3+=1;
-                
-            }else if((document.getElementById((i+1)+nombre))===2){
-                votos2+=1;
-                
-            }else{
-                votos1+=1;
-                
-            }
-            votosTotales= votos5 + votos4 + votos3 + votos2 + votos1;
-            mediaVotos= (5*votos5 + 4*votos4 + 3*votos3 + 2*votos2 + 1*votos1)/(votosTotales);
-
-            return mediaVotos;
-
-
-
-
+        function calcularMedia(){
+            media=((numValoraciones*media)+ contador)/(numValoraciones+1);
+            return media;
         }
 
     </script>
