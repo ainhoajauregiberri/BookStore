@@ -1,10 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-}
 .form {
   position: relative;
   z-index: 1;
@@ -89,7 +84,10 @@
   color: #EF3B3A;
 }
 
-body {
+.login-page{
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
   background: white; /* fallback for old browsers */
   background: -webkit-linear-gradient(right, rgb(177, 190, 201), rgba(180, 133, 149, 0.773));
   background: -moz-linear-gradient(right, rgb(177, 190, 201), rgba(180, 133, 149, 0.773));
