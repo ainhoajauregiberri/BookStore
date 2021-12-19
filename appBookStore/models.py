@@ -56,6 +56,7 @@ class Libro(models.Model):
     sinopsis = models.CharField(max_length=800)
     fechaPubli = models.DateField()
     mediaValoracion = models.FloatField(default=0)
+    numValoraciones = models.IntegerField(default=0)
     imagenLink = models.CharField(max_length=800)
     def linkLibro(self):
         return f"fotos/{self.id}.jpg"
@@ -66,7 +67,8 @@ class Valoracion(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
-    puntuacion = models.IntegerField
+    puntuacion = models.IntegerField(default=0)
+    texto = models.CharField(max_length=1000, default="")
     def __str__(self):
         return f"{self.usuario}: {self.puntuacion} ({self.libro})"
 
