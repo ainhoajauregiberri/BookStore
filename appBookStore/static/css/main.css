@@ -16,7 +16,11 @@ html{
 
 /*body*/
 
+<<<<<<< HEAD
 body{
+=======
+.fondo{
+>>>>>>> 2f1c979271a259be5d467757838388ac6be7d985
     background-color: white;
     margin-top: -64px;
     height: 100%;
