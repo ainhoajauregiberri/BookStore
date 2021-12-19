@@ -17,6 +17,7 @@ html{
 /*body*/
 
 body{
+    background-color: white;
     margin-top: -64px;
     height: 100%;
     padding: 0px;
