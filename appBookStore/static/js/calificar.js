@@ -14,29 +14,37 @@ function calificar(item){
     }
 };
 
-function mediaBD(item, mediaValoracion, numValoraciones){
+function mediaBD(item, id, mediaValoracion, numValoraciones){
 
-    mediaValoracion=((numValoraciones*mediaValoracion)+ contador)/(numValoraciones+1);
-    alert('Media '+mediaValoracion);
-    numValoraciones+=1;
+    var sqlite3 = require('sqlite3').verbose();
+
+    alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
+
+    let db = new sqlite3.Database('./db.sqlite3')
+
     
+    item.disabled= true;
+    mediaValoracion=((numValoraciones*mediaValoracion)+contador)/(numValoraciones+1);
+    numValoraciones+=1;
+
+    let data = [mediaValoracion, mediaValoracion];
+     
+    var sql = 'UPDATE Libro set mediaValoracion=? and numValoraiones=? where id=?'
+
+    db.run(sql, data, function(err){
+        if(err){
+            return console.error(err.message);
+        }
+        console.log('Row(s) updated: ${this.changes}');
+
+    });
+
+    alert('Se ha guardado la media '+mediaValoracion+' y el numero de valoraciones es '+numValoraciones);
+
+    db.close();
 }
 /*
 
 parseInt(document.getElementById(1).media)
-alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
-    item.disabled= true;
 
-    
-
-
-    alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
-
-
-item.disabled= true;
-
-media=((libro.numValoraciones*ilbro.media)+ contador)/(libro.numValoraciones+1);
-
-alert('Media '+media);
-libro.numValoraciones+=1;
 */
