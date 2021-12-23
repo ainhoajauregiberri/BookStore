@@ -1,6 +1,7 @@
 <!--output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])-->
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block titulo %} ¡Las últimas novedades de las editoriales!{% endblock %}
 
