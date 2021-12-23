@@ -67,7 +67,7 @@
 
 	
     <button class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
-    onclick="mediaBD(this, '{{ libro.mediaValoracion}}', '{{ libro.numValoraciones}}')" >Calificar</button>
+    onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))" >Calificar</button>
                             
                         </div>
                         <p class="texto">
