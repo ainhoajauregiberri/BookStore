@@ -14,8 +14,11 @@ function calificar(item){
 };
 
 function mensaje(){
-    window.alert("¡Gracias por calificar este libro con " +contador+ " estrellas!");
+    window.alert('¡Gracias por calificar este libro con '+contador+ ' estrellas!');
+    
 };
+
+
 
 function calcularMedia(){
     var numValoraciones;
