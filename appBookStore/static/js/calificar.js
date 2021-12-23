@@ -15,19 +15,11 @@ function calificar(item){
     
 };
 
-function mensaje(item){
-    alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
+function mediaBD(item){
+    alert('¡Gracias por calificar este libro con '+{{libro}} contador+' estrellas!');
     item.disabled= true;
-  
-}
-
-function calcularMedia(item){
-
-    var numValoraciones;
-var media=1;
-media=((libro.numValoraciones*media)+ contador)/(libro.numValoraciones+1);
-libro.numValoraciones+=1;
-
-
+    {{libro}}
+    media=((libro.numValoraciones*media)+ contador)/(libro.numValoraciones+1);
+    libro.numValoraciones+=1;
 }
 
