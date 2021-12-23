@@ -66,8 +66,8 @@
 
 
 	
-    <button class="botonCalificar" style="border:rgb(0, 0, 0);border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
-    onclick="mediaBD(this)" >Calificar</button>
+    <button class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
+    onclick="mediaBD(this, '{{ libro.mediaValoracion}}', '{{ libro.numValoraciones}}')" >Calificar</button>
                             
                         </div>
                         <p class="texto">
@@ -81,7 +81,11 @@
         </div>
         
     </div>
-    <script src="{% static 'js/calificar.js' %}"></script>
+    <script src="{% static 'js/calificar.js' %}">
+
+    
+    </script>
+
     
  {% endblock %}
 

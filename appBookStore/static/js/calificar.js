@@ -1,4 +1,4 @@
-var contador;
+var contador=0;
 
 function calificar(item){
     console.log(item);
@@ -12,14 +12,31 @@ function calificar(item){
             document.getElementById((i+1)+nombre).style.color="black";
         }
     }
-    
 };
 
-function mediaBD(item){
-    alert('¡Gracias por calificar este libro con '+{{libro}} contador+' estrellas!');
-    item.disabled= true;
-    {{libro}}
-    media=((libro.numValoraciones*media)+ contador)/(libro.numValoraciones+1);
-    libro.numValoraciones+=1;
-}
+function mediaBD(item, mediaValoracion, numValoraciones){
 
+    mediaValoracion=((numValoraciones*mediaValoracion)+ contador)/(numValoraciones+1);
+    alert('Media '+mediaValoracion);
+    numValoraciones+=1;
+    
+}
+/*
+
+parseInt(document.getElementById(1).media)
+alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
+    item.disabled= true;
+
+    
+
+
+    alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
+
+
+item.disabled= true;
+
+media=((libro.numValoraciones*ilbro.media)+ contador)/(libro.numValoraciones+1);
+
+alert('Media '+media);
+libro.numValoraciones+=1;
+*/
