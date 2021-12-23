@@ -16,14 +16,13 @@ function calificar(item){
 
 function mediaBD(item, id, mediaValoracion, numValoraciones){
 
+    alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
+    item.disabled= true;
+
     var sqlite3 = require('sqlite3').verbose();
 
-    alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
-
     let db = new sqlite3.Database('./db.sqlite3')
-
-    
-    item.disabled= true;
+   
     mediaValoracion=((numValoraciones*mediaValoracion)+contador)/(numValoraciones+1);
     numValoraciones+=1;
 
