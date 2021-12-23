@@ -91,13 +91,16 @@
   background: -o-linear-gradient(right, rgb(177, 190, 201), rgba(180, 133, 149, 0.773));
   background: linear-gradient(to left, rgb(177, 190, 201), rgba(180, 133, 149, 0.773));
 
-  background: -webkit-linear-gradient(bottom, rgba(136, 66, 95, 0.966), white);
-  background: -moz-linear-gradient(bottom, rgba(136, 66, 95, 0.965), white);
-  background: -o-linear-gradient(bottom, rgba(136, 66, 95, 0.965), white);
-  background: linear-gradient(to top, rgba(136, 66, 95, 0.965), white);
+  background: -webkit-linear-gradient(bottom, rgba(180, 133, 149, 0.773), white);
+  background: -moz-linear-gradient(bottom, rgba(180, 133, 149, 0.773), white);
+  background: -o-linear-gradient(bottom, rgba(180, 133, 149, 0.773), white);
+  background: linear-gradient(to top, rgba(180, 133, 149, 0.773), white);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;   
  
-  margin-bottom: -200px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  
 }

@@ -37,13 +37,6 @@ class Idioma(models.Model):
         return f"{self.id}. {self.nombre}"
 
 
-class Usuario(models.Model):
- # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
-    nombre = models.CharField(max_length=50)
-    usuario = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
-    def __str__(self):
-        return f"{self.usuario}. {self.password}"
 
 class Libro(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
@@ -62,6 +55,15 @@ class Libro(models.Model):
         return f"fotos/{self.id}.jpg"
     def __str__(self):
         return f"{self.id}. {self.nombre}, {self.autores.all()}, {self.editorial}, {self.genero}, {self.idioma}, {self.paginas} páginas"
+
+class Usuario(models.Model):
+ # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
+    nombre = models.CharField(max_length=50)
+    usuario = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
+    notificar = models.BooleanField(default=False)
+    def __str__(self):
+        return f"{self.usuario}. {self.password}"
 
 class Valoracion(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
