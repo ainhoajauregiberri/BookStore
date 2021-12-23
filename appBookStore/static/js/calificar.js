@@ -1,5 +1,6 @@
+var contador;
+
 function calificar(item){
-    var contador;
     console.log(item);
     contador=item.id[0]; //captura primer caracter del id
     let nombre= item.id.substring(1);//captura toda la cadena despues del primer caracter (estrella)
@@ -15,7 +16,7 @@ function calificar(item){
 };
 
 function mensaje(item){
-    alert('¡Gracias por calificar este libro!');
+    alert('¡Gracias por calificar este libro con '+contador+' estrellas');
     item.disabled= true;
 }
 
