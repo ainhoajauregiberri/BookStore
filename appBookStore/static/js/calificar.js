@@ -11,12 +11,14 @@ function calificar(item){
             document.getElementById((i+1)+nombre).style.color="black";
         }
     }
-};
-
-function mensaje(){
-    window.alert('¡Gracias por calificar este libro con '+contador+ ' estrellas!');
     
 };
+
+function mensaje(item){
+    alert('¡Gracias por calificar este libro!');
+    item.disabled= true;
+}
+
 
 
 
