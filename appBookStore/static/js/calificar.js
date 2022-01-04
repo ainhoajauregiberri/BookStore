@@ -34,6 +34,9 @@ function mediaBD(item, id, mediaValoracion, numValoraciones){
 
     XMLHttpRequest.OPENED("POST", "", "")
 
+    xhttp.open("POST", "C:/Users/ALUMNO/python/projects/.virtualenvs/entornoBS/BookStore/db.sqlite3", true);
+    xhttp.send("UPDATE Libro set mediaValoracion=? and numValoraiones=? where id=?");
+
     alert('Se ha guardado la media '+mediaValoracion+' y el numero de valoraciones es '+numValoraciones);
 
     db.close();
