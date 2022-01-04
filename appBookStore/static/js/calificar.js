@@ -19,14 +19,8 @@ function mediaBD(item, id, mediaValoracion, numValoraciones){
     alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
     item.disabled= true;
 
-    var sqlite3 = require('sqlite3').verbose();
-
-    let db = new sqlite3.Database('./db.sqlite3')
-   
     mediaValoracion=((numValoraciones*mediaValoracion)+contador)/(numValoraciones+1);
     numValoraciones+=1;
-
-    let data = [mediaValoracion, mediaValoracion];
      
     var sql = 'UPDATE Libro set mediaValoracion=? and numValoraiones=? where id=?'
 
@@ -37,6 +31,8 @@ function mediaBD(item, id, mediaValoracion, numValoraciones){
         console.log('Row(s) updated: ${this.changes}');
 
     });
+
+    XMLHttpRequest.OPENED("POST", "", "")
 
     alert('Se ha guardado la media '+mediaValoracion+' y el numero de valoraciones es '+numValoraciones);
 
