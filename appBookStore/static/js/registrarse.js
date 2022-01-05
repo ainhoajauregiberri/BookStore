@@ -13,21 +13,26 @@ function registrarse(item){
 
    */ 
 
-    var nombre=document.getElementById("nombreCrear").value;
-    var usuario=document.getElementById("usuarioCrear").value;
-    var password=document.getElementById("passCrear").value;
+    var nombreCrear=document.getElementById("nombreCrear").value;
+    var usuarioCrear=document.getElementById("usuarioCrear").value;
+    var passwordCrear=document.getElementById("passCrear").value;
 
-    alert('El usuario es'+nombre+usuario+password);
+  
+
+    usuarioCrear1 = Usuario(nombre='Eneida', usuario='eneida98', password='kaixo1234');
+    usuarioCrear1.save();
+    alert('El usuario es'+nombreCrear+usuarioCrear+passwordCrear);
 
     /*
-
-    usuarioCrear1 = Usuario(nombre=document.getElementById("nombreCrear").value, usuario=document.getElementById("usuarioCrear").value, password=document.getElementById("passCrear").value);
+    usuarioCrear1
+    nombre=nombreCrear, usuario=usuarioCrear, password=passwordCrear, notificar=false
     usuarioCrear1.save();  
 
-    console.log(item);
+    alert('El usuario es'+nombreCrear+usuarioCrear+passwordCrear);
 
-    alert('El usuario es'+document.getElementById("usuarioCrear").value);
-    
     */
+
+    console.log(item);
+    
     
 };
