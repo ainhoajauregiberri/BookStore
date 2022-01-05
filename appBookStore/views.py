@@ -3,8 +3,6 @@ from django.shortcuts import get_object_or_404, get_list_or_404
 from django.shortcuts import render
 from .models import Autor, Genero, Idioma, Editorial, Libro, Usuario
 
-
-
 #devuelve el usuario que ha iniciado sesion
 def inicio(request):
 	usuarios = get_list_or_404(Usuario.objects.order_by('id'))
@@ -13,21 +11,8 @@ def inicio(request):
 
 #devuelve el usuario que ha iniciado sesion
 def registrarse(request):
-	if request.method == 'POST':
-        if request.POST.get('nombre') and request.POST.get('usuario') and request.POST.get('password'):
-            usuarioCreado=Usuario()
-            usuarioCreado.nombre= request.POST.get('nombre')
-			usuarioCreado.usuario= request.POST.get('usuario')
-			usuarioCreado.password= request.POST.get('password')
-			usuarioCreado.notificar= request.POST.get(False)
-			usuarioCreado.save()
-			return render(request, 'registrarse.html')  
-
-	else:
-       	return render(request, 'registrarse.html')
+	return render(request, 'registrarse.html')
     
-
-
 #devuelve el listado de libros de cada editorial
 def index(request):
 	editorial1 = Editorial.objects.get(pk=1)
