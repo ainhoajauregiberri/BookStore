@@ -8,6 +8,8 @@ urlpatterns = [
     path('getDatosUsuario/', views.getDatosUsuario, name='getDatosUsuario'),
     path('iniciarSesionUsuario/', views.iniciarSesionUsuario, name='iniciarSesionUsuario'),
 
+    path('libro/<int:libro_id>/autores/getDatosValoracion', views.getDatosValoracion , name='getDatosValoracion'),
+
     path('index/', views.index, name='index'),
     
 

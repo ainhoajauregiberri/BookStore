@@ -3,12 +3,11 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, get_list_or_404
 from django.shortcuts import render
 
-from appBookStore.forms import UsuarioForm, UsuariosExistentesForm
-from .models import Autor, Genero, Idioma, Editorial, Libro, Usuario
+from appBookStore.forms import UsuarioForm, UsuariosExistentesForm, ValoracionCrear
+from .models import Autor, Genero, Idioma, Editorial, Libro, Usuario, Valoracion
 
 from pprint import pprint
 
-usuarioRegistrado = ""
 
 #devuelve el usuario que ha iniciado sesion
 def inicio(request):
@@ -32,7 +31,8 @@ def iniciarSesionUsuario(request):
 						passwordCorrecto = True
 			if usuarioCorrecto==True:
 				if passwordCorrecto == True:
-					usuarioRegistrado= usuarioForm
+					global usuarioRegistrado 
+					usuarioRegistrado = usuarioForm
 					return HttpResponseRedirect('../index')
 				else:
 					return HttpResponse('La contraseña es incorrecta. Inténtelo de nuevo.')
@@ -72,6 +72,7 @@ def getDatosUsuario(request):
 	return render(request, 'registrarse.html', {'form' : form})
 
 
+ 
 #devuelve el listado de libros de cada editorial
 def index(request):
 	editorial1 = Editorial.objects.get(pk=1)
@@ -81,9 +82,9 @@ def index(request):
 	editorial2 = Editorial.objects.get(pk=2)
 	librosEd2 = editorial2.libro_set.all()
 	librosEd2 = librosEd2.order_by('fechaPubli').reverse()
-
+	print(usuarioRegistrado)
+	context = {'libro1': librosEd1[0], 'libro2': librosEd2[0], 'usuarioRegistrado': usuarioRegistrado}
 	
-	context = {'libro1': librosEd1[0], 'libro2': librosEd2[0]}
 	return render(request, 'index.html', context)
 
 #devuelve la lista de LIBROS
@@ -96,8 +97,27 @@ def listaLibros(request):
 def detallesLibro(request, libro_id):
 	libro = get_object_or_404(Libro, pk=libro_id)
 	autores = libro.autores.all()
-	context = {'libro' : libro, 'autores' : autores}
+	form = ValoracionCrear()
+	context = {'libro' : libro, 'autores' : autores, 'form': form}
 	return render(request, 'detallesLibro.html', context)
+
+
+def getDatosValoracion(request, libro_id):
+	libro = get_object_or_404(Libro, pk=libro_id)
+	if request.method=='POST':
+		form= ValoracionCrear(request.POST)
+		if form.is_valid():
+			puntuacionForm = form.cleaned_data['puntuacion']
+			textoForm = form.cleaned_data['texto']
+			mediaValoracion=((libro.numValoraciones*libro.mediaValoracion)+contador)/(libro.numValoraciones+1)
+    		libro.update({"mediaValoracion": mediaValoracion}, {"numValoraciones": libro.numValoraciones+1})
+			valoracionNuevo = Valoracion(usuarioRegistrado, libro, puntuacionForm, textoForm)
+			valoracionNuevo.save()
+			return HttpResponseRedirect('../')
+	else:
+		form = ValoracionCrear()
+	return render(request, 'registrarse.html', {'form' : form})
+
 
 
 #devuelve la lista de EDITORIALES
@@ -125,3 +145,4 @@ def detallesAutores(request, autor_id):
 	libros = autor.libro_set.all()
 	context = {'autor' : autor, 'libros': libros}
 	return render(request, 'detallesAutor.html', context)
+

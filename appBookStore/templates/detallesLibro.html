@@ -57,18 +57,22 @@
                             </p>
                             <br>
                         <div class="detallesClasificacionestrellas">
-                            <span class="fa fa-star" onclick="calificar(this)" id="1estrella"></span>
-                            <span class="fa fa-star" onclick="calificar(this)" id="2estrella"></span>
-                            <span class="fa fa-star" onclick="calificar(this)" id="3estrella"></span>
-                            <span class="fa fa-star" onclick="calificar(this)" id="4estrella"></span>
-                            <span class="fa fa-star" onclick="calificar(this)" id="5estrella"></span>
+                            <form action="{% url 'getDatosValoracion' libro.id %}" method="POST">
+                                <span class="fa fa-star" onclick="calificar(this)" id="1estrella"></span>
+                                <span class="fa fa-star" onclick="calificar(this)" id="2estrella"></span>
+                                <span class="fa fa-star" onclick="calificar(this)" id="3estrella"></span>
+                                <span class="fa fa-star" onclick="calificar(this)" id="4estrella"></span>
+                                <span class="fa fa-star" onclick="calificar(this)" id="5estrella"></span>
                             
 
+                            <!--onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))"
+                            -->
 
-	
-    <button class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
-    onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))" >Calificar</button>
-                            
+                            {% csrf_token %}
+                            {{form}}
+    <button type="submit" class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
+     >Calificar</button>
+</form>                     
                         </div>
                         <p class="texto">
                             ({{libro.numValoraciones}})

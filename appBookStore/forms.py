@@ -1,6 +1,7 @@
-from BookStore.appBookStore.models import Valoracion
+from django.db.models import fields
 from .models import Usuario
 from django import forms
+from .models import Valoracion
 
 class UsuarioForm(forms.ModelForm):    
     class Meta:
@@ -14,10 +15,16 @@ class UsuariosExistentesForm(forms.ModelForm):
         fields = ("__all__")
         exclude = ['notificar', 'nombre']
 
-class CrearValoracion(forms.ModelForm):    
+class ValoracionCrear(forms.Valoracion):
     class Meta:
         model = Valoracion
-        fields = ("__all__")
-        exclude = ['puntuacion']
+        fields = ['puntuacion', 'texto']
+
+
+#class CrearValoracion(forms.ModelForm):    
+ #   class Meta:
+  #      model = Valoracion
+   #     fields = ("__all__")
+    #    exclude = ['puntuacion']
 
         

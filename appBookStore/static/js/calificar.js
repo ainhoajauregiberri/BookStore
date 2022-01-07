@@ -17,10 +17,16 @@ function calificar(item){
 function mediaBD(item, id, mediaValoracion, numValoraciones){
 
     alert('¡Gracias por calificar este libro con '+contador+' estrellas!');
+
+
+    document.
+
+
     item.disabled= true;
 
-    mediaValoracion=((numValoraciones*mediaValoracion)+contador)/(numValoraciones+1);
-    numValoraciones+=1;
+   
+
+   
      
     var sql = 'UPDATE Libro set mediaValoracion=? and numValoraiones=? where id=?'
 

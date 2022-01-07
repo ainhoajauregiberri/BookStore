@@ -3,7 +3,13 @@
 {% load static %}
 {% load i18n %}
 
-{% block titulo %} ¡Las últimas novedades de las editoriales!{% endblock %}
+{% block titulo %}  
+{% if usuarioRegistrado %} 
+<p>Hola, {{usuarioRegistrado}}</p> 
+{% endif %}
+¡Las últimas novedades de las editoriales! 
+
+{% endblock %}
 
 {% block contenido %}
 
