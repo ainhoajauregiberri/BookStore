@@ -3,16 +3,45 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, get_list_or_404
 from django.shortcuts import render
 
-from appBookStore.forms import UsuarioForm
+from appBookStore.forms import UsuarioForm, UsuariosExistentesForm
 from .models import Autor, Genero, Idioma, Editorial, Libro, Usuario
 
 from pprint import pprint
 
+usuarioRegistrado = ""
+
 #devuelve el usuario que ha iniciado sesion
 def inicio(request):
-	usuarios = get_list_or_404(Usuario.objects.order_by('id'))
-	context = {'usuarios': usuarios}
+	form = UsuariosExistentesForm()
+	context = {'form' : form}
 	return render(request, 'inicio.html', context)
+
+def iniciarSesionUsuario(request):
+	usuarios = get_list_or_404(Usuario.objects.order_by('id'))
+	usuarioCorrecto = False
+	passwordCorrecto = False
+	if request.method=='POST':
+		form= UsuariosExistentesForm(request.POST)
+		if form.is_valid():
+			usuarioForm = form.cleaned_data['usuario']
+			passwordForm = form.cleaned_data['password']
+			for usuario in usuarios:
+				if usuario.usuario == usuarioForm:
+					usuarioCorrecto = True
+					if usuario.password == passwordForm:
+						passwordCorrecto = True
+			if usuarioCorrecto==True:
+				if passwordCorrecto == True:
+					usuarioRegistrado= usuarioForm
+					return HttpResponseRedirect('../index')
+				else:
+					return HttpResponse('La contraseña es incorrecta. Inténtelo de nuevo.')
+			else:
+				return HttpResponse('El usuario es incorrecto. Inténtelo de nuevo.')
+	else:
+		form = UsuarioForm()
+	return render(request, 'registrarse.html', {'form' : form})
+
 
 #devuelve el usuario que ha iniciado sesion
 def registrarse(request):
@@ -21,27 +50,26 @@ def registrarse(request):
 	return render(request, 'registrarse.html', context)
     
 def getDatosUsuario(request):
+	usuarios = get_list_or_404(Usuario.objects.order_by('id'))
+	existeUsuario = False
 	if request.method=='POST':
 		form= UsuarioForm(request.POST)
 		if form.is_valid():
-			nombre = form.cleaned_data['nombre']
-
-			pprint(dir(Usuario))
-
-			usuario = form.cleaned_data['usuario']
-			password = form.cleaned_data['password']
-			usuarioCreado = Usuario(20, nombre, usuario, password)
-			usuarioCreado.save()
-			return HttpResponseRedirect('../')
+			nombreForm = form.cleaned_data['nombre']
+			usuarioForm = form.cleaned_data['usuario']
+			passwordForm = form.cleaned_data['password']
+			for usuario in usuarios:
+				if usuario.usuario == usuarioForm:
+					existeUsuario = True
+			if existeUsuario==False:
+				usuarioCreado = Usuario((usuario.id)+1, nombreForm, usuarioForm, passwordForm)
+				usuarioCreado.save()
+				return HttpResponseRedirect('../')
+			else:
+				return HttpResponse('El usuario '+usuarioForm+' ya existe. Inténtelo de nuevo.')
 	else:
 		form = UsuarioForm()
 	return render(request, 'registrarse.html', {'form' : form})
-
-
-
-
-
-
 
 
 #devuelve el listado de libros de cada editorial
