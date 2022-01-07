@@ -108,29 +108,6 @@
                         </div>
                     </div>
                 
-                    <!--  Intento de uso de metadatos 
-
-                    <div class="row" v-for="(item.data, item.id) item in contacts" itemscope itemtype="https://schema.org/Person">
-                        <div class="col-xs-4">
-                            <p itemprop="name">{{item.data.nombre}}</p>
-                        </div>
-                        <div class="col-xs-4">
-                            <p itemprop="email">{{item.data.email}}</p>
-                        </div>
-                        <div class="col-xs-3">
-                            <p itemprop="telephone">{{item.data.telefono}}</p>
-                        </div>
-                        <div class="col-xs-1">
-                            <button class="btn btn-danger btn-sm" @click="borrarContacto(item.id)">
-                                <span class="glyphicon glyphicon-remove"></span></button>
-                        </div>
-                    </div>
-                    -->
-
-                    <!-- con el v-for recorremos todos los elementos del modelo (los contactos) y guardo cada elemento
-                    y el indice de cada uno para después eliminarlo en el array de contactos -->
-                    <!-- no hace falta poner :key="index", ya que con el algoritmo propio de vue nos sirve para que 
-                        diferencie los nodos del DOM -->
                     <div class="row" v-for="item in contacts" v-bind:key="item.id">
                         <div class="col-xs-4">
                             <p>{{item.data.nombre}}</p>
@@ -200,9 +177,6 @@
                             <div id="success"></div>
                             <div class="row">
                                 <div class="form-group col-xs-12">
-                                    <!-- en el momento en el que le demos al botón de añadir, se activa el evento
-                                    por click o por enter (con keyup.enter) y comprobamos si los campos son correctos.
-                                    El botón estará deshabilitado hasta que todos los elemento tengan algo escrito dentro -->
                                     <button type="button" class="btn btn-success btn-lg"
                                     :disabled="nombre==null || email==null || telefono==null"
                                     @click="guardarContacto" @keyup.enter="guardarContacto">Añadir</button>
