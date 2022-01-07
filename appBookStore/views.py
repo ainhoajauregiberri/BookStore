@@ -1,7 +1,12 @@
 from django.http import HttpResponse, Http404
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, get_list_or_404
 from django.shortcuts import render
+
+from appBookStore.forms import UsuarioForm
 from .models import Autor, Genero, Idioma, Editorial, Libro, Usuario
+
+from pprint import pprint
 
 #devuelve el usuario que ha iniciado sesion
 def inicio(request):
@@ -11,8 +16,34 @@ def inicio(request):
 
 #devuelve el usuario que ha iniciado sesion
 def registrarse(request):
-	return render(request, 'registrarse.html')
+	form = UsuarioForm()
+	context = {'form' : form}
+	return render(request, 'registrarse.html', context)
     
+def getDatosUsuario(request):
+	if request.method=='POST':
+		form= UsuarioForm(request.POST)
+		if form.is_valid():
+			nombre = form.cleaned_data['nombre']
+
+			pprint(dir(Usuario))
+
+			usuario = form.cleaned_data['usuario']
+			password = form.cleaned_data['password']
+			usuarioCreado = Usuario(20, nombre, usuario, password)
+			usuarioCreado.save()
+			return HttpResponseRedirect('../')
+	else:
+		form = UsuarioForm()
+	return render(request, 'registrarse.html', {'form' : form})
+
+
+
+
+
+
+
+
 #devuelve el listado de libros de cada editorial
 def index(request):
 	editorial1 = Editorial.objects.get(pk=1)

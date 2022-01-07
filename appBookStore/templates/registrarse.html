@@ -6,24 +6,23 @@
 {% block contenido %}
 <div class="login-page">
   <div class="form">
-    <form class="login-form">
-        <input id="nombreCrear" type="text" placeholder="Nombre">
+    <form class="login-form" action="{% url 'getDatosUsuario' %}" method="POST">
+        {% csrf_token %}
+        {{form}}
+    <!--    <input id="nombreCrear" type="text" placeholder="Nombre">
         <input id="usuarioCrear" type="text" placeholder="Usuario">
         <input id="passCrear" type="password" placeholder="Contraseña">
-        <button onclick="registrarse(this)">Crear</button>
+        -->
+
+        <button type="submit" class="btn btn-success">Crear</button>
+      <!--   <button onclick="registrarse(this)">Crear</button> -->
         <p class="message">¿Ya tienes una cuenta? <a href="{% url 'inicio' %}">Iniciar sesión</a></p>
       </form>
   </div>
 </div>
 
 <script src="{% static 'js/registrarse.js' %}">
-
     
 </script>
 
 {% endblock %}
-
-
-
-
-

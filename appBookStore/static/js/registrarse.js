@@ -19,7 +19,7 @@ function registrarse(item){
 
   
 
-    usuarioCrear1 = Usuario(nombre='Eneida', usuario='eneida98', password='kaixo1234');
+    usuarioCrear1 = Usuario(nombre=nombreCrear, usuario=usuarioCrear, password=passwordCrear);
     usuarioCrear1.save();
     alert('El usuario es'+nombreCrear+usuarioCrear+passwordCrear);
 

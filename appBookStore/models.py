@@ -63,7 +63,7 @@ class Usuario(models.Model):
     password = models.CharField(max_length=50)
     notificar = models.BooleanField(default=False)
     def __str__(self):
-        return f"{self.usuario}. {self.password}"
+        return f"{self.id}. {self.usuario}. {self.password}"
 
 class Valoracion(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
