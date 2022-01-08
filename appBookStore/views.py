@@ -112,15 +112,13 @@ def getDatosValoracion(request, libro_id):
 			mediaValoracion=((libro.numValoraciones*libro.mediaValoracion)+puntuacionForm)/(libro.numValoraciones+1)
 			#libro.update({"mediaValoracion": mediaValoracion}, {"numValoraciones": libro.numValoraciones+1})
 			#cambiamos la linea 113 por las siguientes
-			libroActualizar = Libro(libro_id,libro.nombre, libro.autores, libro.editorial, libro.genero, libro.idioma, libro.paginas, libro.sinopsis, libro.fechaPubli, mediaValoracion, (libro.numValoraciones+1), libro.imagenLink)
+			libroActualizar = Libro(libro.id,libro.nombre, libro.autores, libro.editorial, libro.genero, libro.idioma, libro.paginas, libro.sinopsis, libro.fechaPubli, mediaValoracion, (libro.numValoraciones)+1, libro.imagenLink)
 			libroActualizar.save()
-			valoracionNuevo = Valoracion(usuarioRegistrado, libroActualizar, puntuacionForm, textoForm)
-			valoracionNuevo.save()
-			form = ValoracionCrear()
+			valoracionNueva = Valoracion(10,usuarioRegistrado, libroActualizar, puntuacionForm, textoForm)
+			valoracionNueva.save()
 		else:
 			return HttpResponse('No ha sido posible realizar la valoración correctamente')
-	else:
-		form = ValoracionCrear()
+	form = ValoracionCrear()
 
 #devuelve la lista de EDITORIALES
 def listaEditoriales(request):
