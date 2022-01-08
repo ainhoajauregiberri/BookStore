@@ -29,14 +29,11 @@ class Genero(models.Model):
     def __str__(self):
         return f"{self.id}. {self.nombre}"
 
-
 class Idioma(models.Model):
     nombre = models.CharField(max_length=50)
 # Campo para la relación one-to-many
     def __str__(self):
         return f"{self.id}. {self.nombre}"
-
-
 
 class Libro(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.

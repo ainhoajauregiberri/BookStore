@@ -109,16 +109,18 @@ def getDatosValoracion(request, libro_id):
 		if form.is_valid():
 			puntuacionForm = form.cleaned_data['puntuacion']
 			textoForm = form.cleaned_data['texto']
-			mediaValoracion=((libro.numValoraciones*libro.mediaValoracion)+contador)/(libro.numValoraciones+1)
-    		libro.update({"mediaValoracion": mediaValoracion}, {"numValoraciones": libro.numValoraciones+1})
-			valoracionNuevo = Valoracion(usuarioRegistrado, libro, puntuacionForm, textoForm)
+			mediaValoracion=((libro.numValoraciones*libro.mediaValoracion)+puntuacionForm)/(libro.numValoraciones+1)
+			#libro.update({"mediaValoracion": mediaValoracion}, {"numValoraciones": libro.numValoraciones+1})
+			#cambiamos la linea 113 por las siguientes
+			libroActualizar = Libro(libro_id,libro.nombre, libro.autores, libro.editorial, libro.genero, libro.idioma, libro.paginas, libro.sinopsis, libro.fechaPubli, mediaValoracion, (libro.numValoraciones+1), libro.imagenLink)
+			libroActualizar.save()
+			valoracionNuevo = Valoracion(usuarioRegistrado, libroActualizar, puntuacionForm, textoForm)
 			valoracionNuevo.save()
-			return HttpResponseRedirect('../')
+			form = ValoracionCrear()
+		else:
+			return HttpResponse('No ha sido posible realizar la valoración correctamente')
 	else:
 		form = ValoracionCrear()
-	return render(request, 'registrarse.html', {'form' : form})
-
-
 
 #devuelve la lista de EDITORIALES
 def listaEditoriales(request):
