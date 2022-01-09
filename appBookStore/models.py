@@ -51,7 +51,7 @@ class Libro(models.Model):
     def linkLibro(self):
         return f"fotos/{self.id}.jpg"
     def __str__(self):
-        return f"{self.id}. {self.nombre}, {self.autores.all()}, {self.editorial}, {self.genero}, {self.idioma}, {self.paginas} páginas"
+        return f"{self.id}. {self.nombre}, {self.numValoraciones}, {self.mediaValoracion} {self.autores.all()}, {self.editorial}, {self.genero}, {self.idioma}, {self.paginas} páginas"
 
 class Usuario(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.

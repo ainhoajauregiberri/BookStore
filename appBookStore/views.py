@@ -109,13 +109,18 @@ def getDatosValoracion(request, libro_id):
 		if form.is_valid():
 			puntuacionForm = form.cleaned_data['puntuacion']
 			textoForm = form.cleaned_data['texto']
-			mediaValoracion=((libro.numValoraciones*libro.mediaValoracion)+puntuacionForm)/(libro.numValoraciones+1)
-			#libro.update({"mediaValoracion": mediaValoracion}, {"numValoraciones": libro.numValoraciones+1})
+			mediaValoracioNuevo=((libro.numValoraciones*libro.mediaValoracion)+puntuacionForm)/(libro.numValoraciones+1)
+			Libro.objects.filter(pk=libro_id).update(mediaValoracion = mediaValoracioNuevo)
+			Libro.objects.filter(pk=libro_id).update(numValoraciones = libro.numValoraciones+1)
+			usuarioConseguido=get_object_or_404(Usuario, usuario=usuarioRegistrado)
+			ValoracionNueva = Valoracion(10, usuarioConseguido.id, libro_id, puntuacionForm, textoForm)
+			ValoracionNueva.save()
 			#cambiamos la linea 113 por las siguientes
-			libroActualizar = Libro(libro.id,libro.nombre, libro.autores, libro.editorial, libro.genero, libro.idioma, libro.paginas, libro.sinopsis, libro.fechaPubli, mediaValoracion, (libro.numValoraciones)+1, libro.imagenLink)
-			libroActualizar.save()
-			valoracionNueva = Valoracion(10,usuarioRegistrado, libroActualizar, puntuacionForm, textoForm)
-			valoracionNueva.save()
+			#libroActualizar = Libro(libro.id,libro.nombre, libro.autores, libro.editorial, libro.genero, libro.idioma, libro.paginas, libro.sinopsis, libro.fechaPubli, mediaValoracion, (libro.numValoraciones)+1, libro.imagenLink)
+			#libroActualizar.save()
+			#valoracionNueva = Valoracion(10,usuarioRegistrado, libroActualizar, puntuacionForm, textoForm)
+			#valoracionNueva.save()
+			return HttpResponseRedirect('../autores')
 		else:
 			return HttpResponse('No ha sido posible realizar la valoración correctamente')
 	form = ValoracionCrear()
