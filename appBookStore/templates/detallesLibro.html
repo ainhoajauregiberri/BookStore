@@ -58,6 +58,8 @@
                             <br>
                         <div class="detallesClasificacionestrellas">
                             <form action="{% url 'getDatosValoracion' libro.id %}" method="POST">
+
+                                <!--
                                 <span class="fa fa-star" onclick="calificar(this)" id="1estrella"></span>
                                 <span class="fa fa-star" onclick="calificar(this)" id="2estrella"></span>
                                 <span class="fa fa-star" onclick="calificar(this)" id="3estrella"></span>
@@ -65,8 +67,18 @@
                                 <span class="fa fa-star" onclick="calificar(this)" id="5estrella"></span>
                             
 
-                            <!--onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))"
+                            onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))"
                             -->
+
+                            <span class="fa fa-star" onload="mediaEstrellas(this, parseInt('{{libro.mediaValoracion}}'))" id="1estrella"></span>
+                            <span class="fa fa-star" id="2estrella"></span>
+                            <span class="fa fa-star" id="3estrella"></span>
+                            <span class="fa fa-star" id="4estrella"></span>
+                            <span class="fa fa-star" id="5estrella"></span>
+
+                            ({{libro.numValoraciones}} valoraciones)
+                        </br>
+                    </br>
                             <div id="calificar">
                                 {% csrf_token %}
                                 {{form}}
@@ -87,8 +99,6 @@
         
     </div>
     <script src="{% static 'js/calificar.js' %}">
-
-    
     </script>
 
     

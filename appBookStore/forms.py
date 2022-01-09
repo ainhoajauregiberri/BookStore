@@ -19,6 +19,9 @@ class ValoracionCrear(forms.ModelForm):
     class Meta:
         model = Valoracion
         fields = ['puntuacion', 'texto']
+        db_constraints = {
+            'puntuacion': 'check (puntuacion<6)'
+        }
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['puntuacion'].widget.attrs.update({

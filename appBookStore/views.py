@@ -97,6 +97,8 @@ def listaLibros(request):
 def detallesLibro(request, libro_id):
 	libro = get_object_or_404(Libro, pk=libro_id)
 	autores = libro.autores.all()
+	#problema con id y objeto entero
+	#valoraciones = Valoracion.objects.get(libro=libro)
 	form = ValoracionCrear()
 	context = {'libro' : libro, 'autores' : autores, 'form': form}
 	return render(request, 'detallesLibro.html', context)
