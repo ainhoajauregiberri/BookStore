@@ -107,7 +107,7 @@
                             <h4>Teléfono</h4>
                         </div>
                     </div>
-                
+                                   
                     <div class="row" v-for="item in contacts" v-bind:key="item.id">
                         <div class="col-xs-4">
                             <p>{{item.data.nombre}}</p>
@@ -387,6 +387,38 @@
           },
           "email": "lorea.intxausti@opendeusto.es",
           "telephone": "+34 555 555 555"
+        }
+     </script>
+     <script type='application/ld+json'> 
+        {
+          "@context": "http://www.schema.org",
+          "@type": "person",
+          "name": "Nora",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Donostia",
+            "addressRegion": "Guipuzcoa",
+            "postalCode": "200010",
+            "addressCountry": "Spain"
+          },
+          "email": "noraroyo@opendeusto.es",
+          "telephone": "+34 777 777 777"
+        }
+     </script>
+     <script type='application/ld+json'> 
+        {
+          "@context": "http://www.schema.org",
+          "@type": "person",
+          "name": "Ainhoa",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Usurbil",
+            "addressRegion": "Guipuzcoa",
+            "postalCode": "200300",
+            "addressCountry": "Spain"
+          },
+          "email": "ainhoajauregiberri@opendeusto.es",
+          "telephone": "+34 999 999 999"
         }
      </script>
 </body>
