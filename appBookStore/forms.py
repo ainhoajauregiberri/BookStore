@@ -19,6 +19,14 @@ class ValoracionCrear(forms.ModelForm):
     class Meta:
         model = Valoracion
         fields = ['puntuacion', 'texto']
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['puntuacion'].widget.attrs.update({
+            'class': 'form-puntuacion'
+        })
+        self.fields['texto'].widget.attrs.update({
+            'class': 'form-texto'
+        })
 
 #class CrearValoracion(forms.ModelForm):    
  #   class Meta:

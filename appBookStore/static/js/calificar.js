@@ -12,6 +12,9 @@ function calificar(item){
             document.getElementById((i+1)+nombre).style.color="black";
         }
     }
+    alert(document.getElementsByClassName("form-puntuacion").item)
+    document.getElementsByClassName("form-puntuacion").value() = contador
+    
 };
 
 function mediaBD(item, id, mediaValoracion, numValoraciones){

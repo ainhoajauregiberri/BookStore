@@ -67,9 +67,10 @@
 
                             <!--onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))"
                             -->
-
-                            {% csrf_token %}
-                            {{form}}
+                            <div id="calificar">
+                                {% csrf_token %}
+                                {{form}}
+                            </div>
     <button type="submit" class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
      >Calificar</button>
 </form>                     
