@@ -69,7 +69,7 @@ class Valoracion(models.Model):
     puntuacion = models.IntegerField(default=0)
     texto = models.CharField(max_length=1000, default="")
     def __str__(self):
-        return f"{self.usuario}: {self.puntuacion} ({self.libro})"
+        return f"{self.id}:{self.usuario} {self.puntuacion} ({self.libro})"
 
 
  

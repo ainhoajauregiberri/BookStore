@@ -24,20 +24,15 @@
                     </div>
                     <div class="pie">
                         <div>
-                            <a href="{% url 'detallesLibro' libro.id %}">{{ libro.nombre }}</a>
+                            <a href="{% url 'detallesLibro' libro.id %}" style="font-weight: bold;">{{ libro.nombre }}</a>
                         </div>
                     </div>
                 </div>
-                <div class="clasificacionestrellas">
-                    <span class="fa fa-star"  onload="mediaEstrellas(this, parseInt('{{libro.id}}')), parseInt('{{libro.mediaValoracion}}')" id="1estrella"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    
+                <div class="clasificacionestrellas"> {{libro.mediaValoracion}}
+                    <span class="fa fa-star" id="1estrella" style="color: orange;"></span> / 5
+                    <span class="fa fa-star" id="2estrella" style="color: orange;"></span>
                 </div>
             </div>
-            
             
         {% endfor %}
         </div>
