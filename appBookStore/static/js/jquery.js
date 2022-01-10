@@ -1,17 +1,6 @@
-
-
-$(document).ready(function () {
-    compruebaAceptaCookies();
-  });
-
-
-  
-
 $("div").click(function () {
     $(this).show("slide", { direction: "left" }, 1000);
 });
-
-
 
 
 jQuery.fx.prototype = {
