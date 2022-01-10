@@ -28,9 +28,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="clasificacionestrellas"> {{libro.mediaValoracion}}
+                <div class="clasificacionestrellas"> 
+                    
+                   {{libro.mediaValoracion|floatformat:2}}
                     <span class="fa fa-star" id="1estrella" style="color: orange;"></span> / 5
                     <span class="fa fa-star" id="2estrella" style="color: orange;"></span>
+               
                 </div>
             </div>
             

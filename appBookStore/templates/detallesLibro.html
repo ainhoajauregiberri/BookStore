@@ -64,6 +64,10 @@
                         <span class="fa fa-star" id="5estrella"></span>
                     
                         ({{libro.numValoraciones}} valoraciones)
+
+                       </br>
+                    </br>
+                        <button class="btnCalificar"><a href=#puntuar>Valorar</a></button>
                        </div>
                    </div>
                    {% else %}
@@ -85,7 +89,7 @@
 </br>
 </br>
        {% endfor %}
-       <div class="puntuar">
+       <div id="puntuar" class="puntuar">
        <form action="{% url 'getDatosValoracion' libro.id %}" method="POST">
        {% if usuarioRegistrado %} 
        <h3 class="tituloComentarios">¡{{usuarioRegistrado}}, anímate a dejar tu comentario!</h3>
