@@ -32,17 +32,17 @@
                     <div class="galeriaIndex">
                         <div class="pieIndex">
                             <div class = "izenburu">
-                                <a href="{% url 'detallesEditoriales' 1 %}">PLANETA DEL LIBRO</a>
+                                <a href="{% url 'detallesEditoriales' 1 %}" onmouseover="alertNovedadPlanetaDelLibro('{{libro1.nombre}}')">PLANETA DEL LIBRO</a>
                             </div>
                         </div>
                         <div class="foto">
                             <div>
-                                <a href="{% url 'detallesLibro' libro1.id %}"><img src= {{ libro1.imagenLink }} alt=""></a>
+                                <a href="{% url 'detallesLibro' libro1.id %}" onmouseover="alertNovedadPlanetaDelLibro('{{libro1.nombre}}')"><img src= {{ libro1.imagenLink }} alt=""></a>
                             </div>
                         </div>
                         <div class="pieIndex">
                             <div>
-                                <a href="{% url 'detallesLibro' libro1.id %}">{{ libro1.nombre }}</a>
+                                <a href="{% url 'detallesLibro' libro1.id %}" onmouseover="alertNovedadPlanetaDelLibro('{{libro1.nombre}}')">{{ libro1.nombre }}</a>
                             </div>
                         </div>
                     </div>
@@ -51,17 +51,17 @@
                     <div class="galeriaIndex">
                         <div class="pieIndex">
                             <div class = "izenburu">
-                                <a href="{% url 'detallesEditoriales' 2 %}">EREIN</a>
+                                <a href="{% url 'detallesEditoriales' 2 %}" onmouseover="alertNovedadErein('{{libro2.nombre}}')">EREIN</a>
                             </div>  
                         </div>
                         <div class="foto">
                             <div> 
-                                <a href="{% url 'detallesLibro' libro2.id %}"><img src= {{ libro2.imagenLink }} alt=""></a>
+                                <a href="{% url 'detallesLibro' libro2.id %}" onmouseover="alertNovedadErein('{{libro2.nombre}}')"><img src= {{ libro2.imagenLink }} alt=""></a>
                             </div>
                         </div>
                         <div class="pieIndex">
                             <div> 
-                                <a href="{% url 'detallesLibro' libro2.id %}">{{ libro2.nombre }}</a>
+                                <a href="{% url 'detallesLibro' libro2.id %}" onmouseover="alertNovedadErein('{{libro2.nombre}}')">{{ libro2.nombre }}</a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,10 @@
 </br> 
   
     
-</div>          
+</div>         
+
+<script src="{% static 'js/efectos.js' %}">
+</script>
 
 
 {% endblock %}

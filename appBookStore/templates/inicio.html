@@ -15,6 +15,20 @@
   document.getElementById("cabecera2").style.pointerEvents="none";
   document.getElementById("cabecera3").style.pointerEvents="none";
   }
+
+
+  function compruebaAceptaCookies() {
+  if(localStorage.aceptaCookies != 'true'){
+    cajacookies.style.display = 'block';
+  }
+}
+
+function aceptarCookies() {
+  localStorage.aceptaCookies = 'true';
+  cajacookies.style.display = 'none';
+}
+
+
 </script>
 
 
@@ -29,5 +43,8 @@
     </form>
   </div>
 </div>
+
+<script src="{% static 'js/jquery.js' %}">
+</script>
 
 {% endblock %}

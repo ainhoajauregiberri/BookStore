@@ -67,7 +67,7 @@
 
                        </br>
                     </br>
-                        <button class="btnCalificar"><a href=#puntuar>Valorar</a></button>
+                        <button class="btnCalificar" ><a href=#puntuar>Valorar</a></button>
                        </div>
                    </div>
                    {% else %}
@@ -92,7 +92,28 @@
        <div id="puntuar" class="puntuar">
        <form action="{% url 'getDatosValoracion' libro.id %}" method="POST">
        {% if usuarioRegistrado %} 
-       <h3 class="tituloComentarios">¡{{usuarioRegistrado}}, anímate a dejar tu comentario!</h3>
+
+
+
+
+
+    
+       <script>
+        window.setInterval (BlinkIt, 1000);
+        var color = "rgba(136, 66, 95, 0.965)";
+        function BlinkIt () {
+        var blink = document.getElementById ("blink");
+        color = (color == "#ffffff")? "rgba(136, 66, 95, 0.965)" : "#ffffff";
+        blink.style.color = color;
+        blink.style.fontSize='36px';}
+        </script>
+        <div id="blink"><h3 style="text-align: center;">¡{{usuarioRegistrado}}, anímate a dejar tu comentario!</h3></div>
+      
+
+
+      
+
+       
        {% endif %}
       
 
