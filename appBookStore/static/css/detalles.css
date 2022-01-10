@@ -53,6 +53,7 @@ p.texto{
     margin-bottom: 10%;
 }
 
+
 .comentarios{
     content: "";
     display: table;
@@ -63,6 +64,7 @@ p.texto{
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 10%;
+    margin-top: -5%;
 }
 
 
@@ -87,5 +89,6 @@ div.detallesClasificacionestrellas.button.botonCalificar{
     cursor: pointer;
    
 }
+
 
 

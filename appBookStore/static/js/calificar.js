@@ -11,15 +11,12 @@ function calificar(item){
         }else{
             document.getElementById((i+1)+nombre).style.color="black";
         }
-    }
-    alert(document.getElementsByClassName("form-puntuacion").item)
-    document.getElementsByClassName("form-puntuacion").value() = contador
     
+    document.getElementsByClassName("form-puntuacion").value() = contador
+    } 
 };
 
-
 function mediaEstrellas(item, mediaValoracion){
-    alert(mediaValoracion)
     console.log(item);
     let nombre= item.id.substring(1);
     for(let i=0; i <5; i ++){

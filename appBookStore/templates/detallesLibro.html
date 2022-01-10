@@ -57,7 +57,7 @@
                             </p>
                             <br>
                         <div class="detallesClasificacionestrellas">
-                            <form action="{% url 'getDatosValoracion' libro.id %}" method="POST">
+                            
 
                                 <!--
                                 <span class="fa fa-star" onclick="calificar(this)" id="1estrella"></span>
@@ -76,36 +76,26 @@
                             <span class="fa fa-star" id="4estrella"></span>
                             <span class="fa fa-star" id="5estrella"></span>
 
+                        </br>
                             ({{libro.numValoraciones}} valoraciones)
                         </br>
                     </br>
-                            <div id="login-page">
-                                {% csrf_token %}
-                                {{form}}
-                            </div>
-    <button type="submit" class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
-     >Calificar</button>
-</form>                     
+    
+                   
                         </div>
-                        <p class="texto">
-                            ({{libro.numValoraciones}})
-                        </p>
+                       
                     </div>
                     {% else %}
                         <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
                 {% endif %}
         </div>
     </div>
-
-
-  
-    {% if usuarioRegistrado %} 
-        <p>¡{{usuarioRegistrado}}, echa un vistazo a los comentarios!</p> 
-    {% endif %}
-    
     
 
     <div class="comentarios">
+        
+        <h3>¡Echa un vistazo a los comentarios!</h3> 
+        
         {% for valoracion in valoraciones %}
         <hr/>
         <b>{{valoracion.usuario.usuario}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{valoracion.puntuacion}}
@@ -118,6 +108,28 @@
         <br>
         <br>
         {% endfor %}
+        <hr/>
+
+        <br>
+        <br>
+        {% if usuarioRegistrado %} 
+ 
+        <h4>¡{{usuarioRegistrado}}, anímate a dejar tu comentario!</h4>
+
+        {% endif %}
+        <form action="{% url 'getDatosValoracion' libro.id %}" method="POST"></form>
+
+        <div class="puntuar">
+            <div class="form">
+            {% csrf_token %}
+            {{form}}
+                  
+        <button type="submit" >Calificar</button>
+        <!--class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
+        -->
+    </div>
+    </div>
+</form>  
     </div>
     <script src="{% static 'js/calificar.js' %}">
     </script>
