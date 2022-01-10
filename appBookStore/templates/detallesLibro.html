@@ -79,7 +79,7 @@
                             ({{libro.numValoraciones}} valoraciones)
                         </br>
                     </br>
-                            <div id="calificar">
+                            <div id="login-page">
                                 {% csrf_token %}
                                 {{form}}
                             </div>
@@ -100,7 +100,7 @@
 
   
     {% if usuarioRegistrado %} 
-        <p>Hola, {{usuarioRegistrado}}</p> 
+        <p>¡{{usuarioRegistrado}}, echa un vistazo a los comentarios!</p> 
     {% endif %}
     
     
