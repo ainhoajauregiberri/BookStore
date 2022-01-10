@@ -95,16 +95,21 @@ def listaLibros(request):
 
 #devuelve los detalles de un LIBRO
 def detallesLibro(request, libro_id):
-	libro = get_object_or_404(Libro, pk=libro_id)
-	autores = libro.autores.all()
+	libroDetallado = get_object_or_404(Libro, pk=libro_id)
+	valoraciones = get_list_or_404(Valoracion, libro=libro_id)
+	autores = libroDetallado.autores.all()
 	#problema con id y objeto entero
 	#valoraciones = Valoracion.objects.get(libro=libro)
 	form = ValoracionCrear()
-	context = {'libro' : libro, 'autores' : autores, 'form': form}
+	context = {'libro' : libroDetallado, 'autores' : autores, 'form': form, 'valoraciones': valoraciones}
 	return render(request, 'detallesLibro.html', context)
 
 
 def getDatosValoracion(request, libro_id):
+	valoraciones = get_list_or_404(Valoracion.objects.order_by('id'))
+	valoracionId=0
+	for valoracion in valoraciones:
+		valoracionId= valoracion.id
 	libro = get_object_or_404(Libro, pk=libro_id)
 	if request.method=='POST':
 		form= ValoracionCrear(request.POST)
@@ -115,7 +120,7 @@ def getDatosValoracion(request, libro_id):
 			Libro.objects.filter(pk=libro_id).update(mediaValoracion = mediaValoracioNuevo)
 			Libro.objects.filter(pk=libro_id).update(numValoraciones = libro.numValoraciones+1)
 			usuarioConseguido=get_object_or_404(Usuario, usuario=usuarioRegistrado)
-			ValoracionNueva = Valoracion(10, usuarioConseguido.id, libro_id, puntuacionForm, textoForm)
+			ValoracionNueva = Valoracion((valoracionId+1), usuarioConseguido.id, libro_id, puntuacionForm, textoForm)
 			ValoracionNueva.save()
 			#cambiamos la linea 113 por las siguientes
 			#libroActualizar = Libro(libro.id,libro.nombre, libro.autores, libro.editorial, libro.genero, libro.idioma, libro.paginas, libro.sinopsis, libro.fechaPubli, mediaValoracion, (libro.numValoraciones)+1, libro.imagenLink)

@@ -70,7 +70,7 @@
                             onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))"
                             -->
 
-                            <span class="fa fa-star" onload="mediaEstrellas(this, parseInt('{{libro.mediaValoracion}}'))" id="1estrella"></span>
+                            <span class="fa fa-star" id="1estrella" onload="mediaEstrellas(this, parseInt('{{libro.mediaValoracion}}'))"></span>
                             <span class="fa fa-star" id="2estrella"></span>
                             <span class="fa fa-star" id="3estrella"></span>
                             <span class="fa fa-star" id="4estrella"></span>
@@ -94,9 +94,12 @@
                     {% else %}
                         <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
                 {% endif %}
-                
         </div>
-        
+    </div>
+    <div class="comentarios">
+        {% for valoracion in valoraciones %}
+        {{valoracion.usuario.usuario}}:{{valoracion.texto}}
+        {% endfor %}
     </div>
     <script src="{% static 'js/calificar.js' %}">
     </script>
