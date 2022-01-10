@@ -1,139 +1,130 @@
- <!--output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])-->
+<!--output = ', '.join([str(libro.id), libro.nombre, str(libro.editorial), str([a.nombre for a in libro.autores.all()])])-->
 
- {% extends "base.html" %}
- {% load static %}
+{% extends "base.html" %}
+{% load static %}
 
- {% block titulo %} Detalle del libro{% endblock %}
- 
- {% block contenido %}
+{% block titulo %} Detalle del libro{% endblock %}
 
- <script>
-    window.onload=function(){
-    document.getElementById("op2").style.background="white";
-    }
+{% block contenido %}
+
+<script>
+   window.onload=function(){
+   document.getElementById("op2").style.background="white";
+   }
 </script>
-    <div class="ila">
-        <div class="zuta">
-            <div>
-                <img src= {{ libro.imagenLink }} class="portada" alt="">
-            </div>
-            
-        </div>
-        <div class="zuta">
-            <h3 class="tituloLibro"> {{ libro.nombre}}</h3>
-            <br>
-                {% if libro %}
-                     <div class="azpiZuta">
-                        <h4 class="infoTitulos"> Número de libro:</h4>
-                            <p class="texto">
-                                Este es el libro número {{ libro.id}} de la biblioteca Bookstore.
-                            </p>
-                            <br>
-                        <h4 class="infoTitulos"> Fecha de publicación:</h4>
-                            <p class="texto">
-                                Fue publicado el  {{ libro.fechaPubli |date:'d-m-Y'}}.
-                            </p>
-                            <br>
-                        <h4 class="infoTitulos"> Autor/es:</h4>
-                            <div class="texto">
-                                {% if autores %}
-                                    {% for a in autores %}
-                                    <ul>
-                                    <li>
-                                        <p class="texto">
-                                        <a href= "{% url 'detallesAutores' a.id %}">{{ a.nombre }}</a>
-                                        </p>
-                                    </li>
-                                    </ul>
-                                    {% endfor %}
-                                    {% else %}
-                                        <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
-                                    {% endif %}
-                                </div>  
-                            <br>
-                        <h4 class="infoTitulos"> Sinopsis:</h4>
-                            <p class="texto">
-                                {{ libro.sinopsis}}
-                            </p>
-                            <br>
-                        <div class="detallesClasificacionestrellas">
-                            
+   <div class="ila">
+       <div class="zuta">
+           <div>
+               <img src= {{ libro.imagenLink }} class="portada" alt="">
+           </div>
+           
+       </div>
+       <div class="zuta">
+           <h3 class="tituloLibro"> {{ libro.nombre}}</h3>
+           <br>
+               {% if libro %}
+                    <div class="azpiZuta">
+                       <h4 class="infoTitulos"> Número de libro:</h4>
+                           <p class="texto">
+                               Este es el libro número {{ libro.id}} de la biblioteca Bookstore.
+                           </p>
+                           <br>
+                       <h4 class="infoTitulos"> Fecha de publicación:</h4>
+                           <p class="texto">
+                               Fue publicado el  {{ libro.fechaPubli |date:'d-m-Y'}}.
+                           </p>
+                           <br>
+                       <h4 class="infoTitulos"> Autor/es:</h4>
+                           <div class="texto">
+                               {% if autores %}
+                                   {% for a in autores %}
+                                   <ul>
+                                   <li>
+                                       <p class="texto">
+                                       <a href= "{% url 'detallesAutores' a.id %}">{{ a.nombre }}</a>
+                                       </p>
+                                   </li>
+                                   </ul>
+                                   {% endfor %}
+                                   {% else %}
+                                       <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
+                                   {% endif %}
+                               </div>  
+                           <br>
+                       <h4 class="infoTitulos"> Sinopsis:</h4>
+                           <p class="texto">
+                               {{ libro.sinopsis}}
+                           </p>
+                           <br>
+                       <div class="detallesClasificacionestrellas">
+                        <span class="fa fa-star" id="1estrella" onload="mediaEstrellas(this, parseInt('{{libro.mediaValoracion}}'))"></span>
+                        <span class="fa fa-star" id="2estrella"></span>
+                        <span class="fa fa-star" id="3estrella"></span>
+                        <span class="fa fa-star" id="4estrella"></span>
+                        <span class="fa fa-star" id="5estrella"></span>
+                    
+                        ({{libro.numValoraciones}} valoraciones)
+                       </div>
+                       <p class="texto">
+                           ({{libro.numValoraciones}})
+                       </p>
+                   </div>
+                   {% else %}
+                       <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
+               {% endif %}
+       </div>
+   </div>
 
-                                <!--
-                                <span class="fa fa-star" onclick="calificar(this)" id="1estrella"></span>
-                                <span class="fa fa-star" onclick="calificar(this)" id="2estrella"></span>
-                                <span class="fa fa-star" onclick="calificar(this)" id="3estrella"></span>
-                                <span class="fa fa-star" onclick="calificar(this)" id="4estrella"></span>
-                                <span class="fa fa-star" onclick="calificar(this)" id="5estrella"></span>
-                            
 
-                            onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))"
-                            -->
-
-                            <span class="fa fa-star" id="1estrella" onload="mediaEstrellas(this, parseInt('{{libro.mediaValoracion}}'))"></span>
-                            <span class="fa fa-star" id="2estrella"></span>
-                            <span class="fa fa-star" id="3estrella"></span>
-                            <span class="fa fa-star" id="4estrella"></span>
-                            <span class="fa fa-star" id="5estrella"></span>
-
-                        </br>
-                            ({{libro.numValoraciones}} valoraciones)
-                        </br>
-                    </br>
-    
-                   
-                        </div>
-                       
-                    </div>
-                    {% else %}
-                        <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
-                {% endif %}
-        </div>
-    </div>
-    
-
-    <div class="comentarios">
-        
-        <h3>¡Echa un vistazo a los comentarios!</h3> 
-        
-        {% for valoracion in valoraciones %}
-        <hr/>
-        <b>{{valoracion.usuario.usuario}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{valoracion.puntuacion}}
-            <span class="fa fa-star" id="1estrella" style="color: orange;"></span> / 5
-            <span class="fa fa-star" id="2estrella" style="color: orange;"></span>
-        
-        <br>
-        <br>
-        {{valoracion.texto}}
-        <br>
-        <br>
-        {% endfor %}
-        <hr/>
-
-        <br>
-        <br>
-        {% if usuarioRegistrado %} 
  
-        <h4>¡{{usuarioRegistrado}}, anímate a dejar tu comentario!</h4>
+   {% if usuarioRegistrado %} 
+       <p>¡{{usuarioRegistrado}}, echa un vistazo a los comentarios!</p> 
+   {% endif %}
+   
+   
 
-        {% endif %}
-        <form action="{% url 'getDatosValoracion' libro.id %}" method="POST"></form>
+   <div class="comentarios">
+       {% for valoracion in valoraciones %}
+       <hr/>
+       <b>{{valoracion.usuario.usuario}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{valoracion.puntuacion}}
+           <span class="fa fa-star" id="1estrella" style="color: orange;"></span> / 5
+           <span class="fa fa-star" id="2estrella" style="color: orange;"></span>
+       
+       <br>
+       <br>
+       {{valoracion.texto}}
+       <br>
+       <br>
+       {% endfor %}
 
-        <div class="puntuar">
-            <div class="form">
-            {% csrf_token %}
-            {{form}}
-                  
-        <button type="submit" >Calificar</button>
-        <!--class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
-        -->
-    </div>
-    </div>
-</form>  
-    </div>
-    <script src="{% static 'js/calificar.js' %}">
-    </script>
+       <form action="{% url 'getDatosValoracion' libro.id %}" method="POST">
 
+        <!--
+        <span class="fa fa-star" onclick="calificar(this)" id="1estrella"></span>
+        <span class="fa fa-star" onclick="calificar(this)" id="2estrella"></span>
+        <span class="fa fa-star" onclick="calificar(this)" id="3estrella"></span>
+        <span class="fa fa-star" onclick="calificar(this)" id="4estrella"></span>
+        <span class="fa fa-star" onclick="calificar(this)" id="5estrella"></span>
     
- {% endblock %}
 
+    onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))"
+    -->
+
+   
+</br>
+</br>
+    <div class="puntuar">
+        <div class="form">
+        {% csrf_token %}
+        {{form}}
+    </div>
+    </div>
+<button type="submit" class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
+>Calificar</button>
+</form>        
+   </div>
+   <script src="{% static 'js/calificar.js' %}">
+   </script>
+
+   
+{% endblock %}
