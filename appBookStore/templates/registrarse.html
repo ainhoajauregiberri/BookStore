@@ -4,6 +4,16 @@
 {% block titulo %} Registrarse {% endblock %}
 
 {% block contenido %}
+
+<script>
+  window.onload=function(){
+  document.getElementById("op1").style.pointerEvents="none";
+  document.getElementById("op2").style.pointerEvents="none";
+  document.getElementById("op3").style.pointerEvents="none";
+  document.getElementById("op4").style.pointerEvents="none";
+  }
+</script>
+
 <div class="login-page">
   <div class="form">
     <form class="login-form" action="{% url 'getDatosUsuario' %}" method="POST">

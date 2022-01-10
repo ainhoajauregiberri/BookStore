@@ -96,9 +96,27 @@
                 {% endif %}
         </div>
     </div>
+
+
+  
+    {% if usuarioRegistrado %} 
+        <p>Hola, {{usuarioRegistrado}}</p> 
+    {% endif %}
+    
+    
+
     <div class="comentarios">
         {% for valoracion in valoraciones %}
-        {{valoracion.usuario.usuario}}:{{valoracion.texto}}
+        <hr/>
+        <b>{{valoracion.usuario.usuario}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{valoracion.puntuacion}}
+            <span class="fa fa-star" id="1estrella" style="color: orange;"></span> / 5
+            <span class="fa fa-star" id="2estrella" style="color: orange;"></span>
+        
+        <br>
+        <br>
+        {{valoracion.texto}}
+        <br>
+        <br>
         {% endfor %}
     </div>
     <script src="{% static 'js/calificar.js' %}">
