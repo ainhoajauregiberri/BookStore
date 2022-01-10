@@ -103,21 +103,22 @@
   padding-bottom: 30px;
 }
 
+.tituloComentarios{
+  color:rgba(136, 66, 95, 0.965);
+  text-align: center;
+}
+
 .puntuar{
   background: white; /* fallback for old browsers */
-
-  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;   
  
   padding-top: 20px;
   padding-bottom: 30px;
-
-  
 }
 
 
-.form {
+.puntuarBox {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
@@ -127,7 +128,7 @@
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-.form input {
+.puntuarBox input {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -138,7 +139,7 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.puntuarBox button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -152,18 +153,18 @@
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+.puntuarBox button:hover,.form button:active,.form button:focus {
   background: rgba(180, 133, 149, 0.774);
 }
-.form .message {
+.puntuarBox .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
-.form .message a {
+.puntuarBox .message a {
   color: rgba(136, 66, 95, 0.965);
   text-decoration: none;
 }
-.form .register-form {
+.puntuarBox .register-form {
   display: none;
 }

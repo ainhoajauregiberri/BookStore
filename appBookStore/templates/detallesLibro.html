@@ -21,19 +21,19 @@
        </div>
        <div class="zuta">
            <h3 class="tituloLibro"> {{ libro.nombre}}</h3>
-           <br>
+       </br>
                {% if libro %}
                     <div class="azpiZuta">
                        <h4 class="infoTitulos"> Número de libro:</h4>
                            <p class="texto">
                                Este es el libro número {{ libro.id}} de la biblioteca Bookstore.
                            </p>
-                           <br>
+                        </br>
                        <h4 class="infoTitulos"> Fecha de publicación:</h4>
                            <p class="texto">
                                Fue publicado el  {{ libro.fechaPubli |date:'d-m-Y'}}.
                            </p>
-                           <br>
+                        </br>
                        <h4 class="infoTitulos"> Autor/es:</h4>
                            <div class="texto">
                                {% if autores %}
@@ -50,12 +50,12 @@
                                        <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
                                    {% endif %}
                                </div>  
-                           <br>
+                            </br>
                        <h4 class="infoTitulos"> Sinopsis:</h4>
                            <p class="texto">
                                {{ libro.sinopsis}}
                            </p>
-                           <br>
+                        </br>
                        <div class="detallesClasificacionestrellas">
                         <span class="fa fa-star" id="1estrella" onload="mediaEstrellas(this, parseInt('{{libro.mediaValoracion}}'))"></span>
                         <span class="fa fa-star" id="2estrella"></span>
@@ -65,9 +65,6 @@
                     
                         ({{libro.numValoraciones}} valoraciones)
                        </div>
-                       <p class="texto">
-                           ({{libro.numValoraciones}})
-                       </p>
                    </div>
                    {% else %}
                        <p class="texto">No se dispone de la información del autor del libro {{editorial.nombre}}</p>
@@ -75,11 +72,9 @@
        </div>
    </div>
 
+   
+       <h3>¡Echa un vistazo a los comentarios!</h3> 
 
- 
-   {% if usuarioRegistrado %} 
-       <p>¡{{usuarioRegistrado}}, echa un vistazo a los comentarios!</p> 
-   {% endif %}
    
    
 
@@ -90,13 +85,17 @@
            <span class="fa fa-star" id="1estrella" style="color: orange;"></span> / 5
            <span class="fa fa-star" id="2estrella" style="color: orange;"></span>
        
-       <br>
-       <br>
+   </br>
+</br>
        {{valoracion.texto}}
-       <br>
-       <br>
+</br>
+</br>
        {% endfor %}
 
+
+       {% if usuarioRegistrado %} 
+       <h3 class="tituloComentarios">¡{{usuarioRegistrado}}, anímate a dejar tu comentario!</h3>
+       {% endif %}
        <form action="{% url 'getDatosValoracion' libro.id %}" method="POST">
 
         <!--
@@ -114,13 +113,14 @@
 </br>
 </br>
     <div class="puntuar">
-        <div class="form">
+        <div class="puntuarBox">
+            <div class="login-form">
         {% csrf_token %}
         {{form}}
+        <button type="submit" class="botonCalificar">Calificar</button>
     </div>
     </div>
-<button type="submit" class="botonCalificar" style="border:#000000;border-style:inset;border-width: thin; font-family: 'Poppins', sans-serif; border-radius: 10%; margin-left: 20px; font-size:x-small;" 
->Calificar</button>
+    </div>
 </form>        
    </div>
    <script src="{% static 'js/calificar.js' %}">

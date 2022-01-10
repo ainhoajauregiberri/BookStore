@@ -54,7 +54,7 @@ p.texto{
 }
 
 
-.comentarios{
+div.comentarios{
     content: "";
     display: table;
     clear: both;
