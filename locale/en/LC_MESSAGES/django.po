@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-26 14:12+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\appOutfitShow\templates\base.html:57
+msgid "Suscribirse a la newsletter"
+msgstr ""
+
+#: .\appOutfitShow\templates\base.html:60
+#: .\appOutfitShow\templates\base.html:122
+msgid "Suscribirse"
+msgstr "Subscribe"
+
+#: .\appOutfitShow\templates\base.html:80
+msgid "ZASO colección!"
+msgstr "ZASO collection"
+
+#: .\appOutfitShow\templates\base.html:81
+msgid "Busques lo que busques!"
+msgstr "Whatever you are looking for"
+
+#: .\appOutfitShow\templates\base.html:82
+msgid "Para todas las ocasiones!"
+msgstr "For all occasions"
+
+#: .\appOutfitShow\templates\base.html:140
+#: .\appOutfitShow\templates\base.html:308
+msgid "Inicio"
+msgstr "Home"
+
+#: .\appOutfitShow\templates\base.html:141
+#: .\appOutfitShow\templates\index.html:103
+msgid "Ocasiones"
+msgstr "Occasions"
+
+#: .\appOutfitShow\templates\base.html:168
+msgid "Estilos"
+msgstr "Styles"
+
+#: .\appOutfitShow\templates\base.html:181
+#: .\appOutfitShow\templates\base.html:309
+msgid "Sobre nosotros"
+msgstr "About us"
+
+#: .\appOutfitShow\templates\base.html:182
+#: .\appOutfitShow\templates\base.html:311
+msgid "Contactar"
+msgstr "Contact us"
+
+#: .\appOutfitShow\templates\base.html:214
+msgid "Síguenos en @ Instagram"
+msgstr "Follow us on @ Instagram"
+
+#: .\appOutfitShow\templates\base.html:310
+msgid "Próximamente"
+msgstr "Coming soon"
+
+#: .\appOutfitShow\templates\index.html:21
+#: .\appOutfitShow\templates\index.html:36
+#: .\appOutfitShow\templates\index.html:59
+#: .\appOutfitShow\templates\index.html:72
+msgid "Moda"
+msgstr "Fashion"
+
+#: .\appOutfitShow\templates\index.html:23
+#: .\appOutfitShow\templates\index.html:38
+#: .\appOutfitShow\templates\index.html:60
+msgid "Bienvenidos a Outfit Showroom"
+msgstr "Welcome to Outfit Showroom"
+
+#: .\appOutfitShow\templates\index.html:61
+msgid ""
+"Bienvenidos a nuestra tienda online donde disponemos de todos los outfits "
+"deseados, ideal para todas las ocasiones y todos los estilos posibles. "
+"Busques lo que buesques, ZASO"
+msgstr "Welcome to our online store where we have all the desired outfits, ideal for all occasions and all possible styles. Look for what you are looking for, ZASO"
+
+#: .\appOutfitShow\templates\index.html:62
+msgid "Leer más"
+msgstr "Read more"
+
+#: .\appOutfitShow\templates\index.html:82
+msgid "Ropa"
+msgstr "Outfit"
+
+#: .\appOutfitShow\templates\index.html:184
+msgid "Estilo de vida"
+msgstr "Lifestyle"
+
+#: .\appOutfitShow\templates\index.html:185
+msgid "10 pasos para el outfit perfecto"
+msgstr "10 steps to the perfect outfit"
+
+#: .\appOutfitShow\templates\index.html:186
+msgid ""
+"La moda es un concepto puramente abstracto que evoluciona en cada década. "
+"Ayer las camisas a cuadros estaban de moda, pero hoy la moda se ubica en "
+"camisolas a rayas anchas con escote en V, y quizás mañana la moda radicará "
+"en camisas al cuerpo y pantalones campana a cuadros.No obstante, lo que "
+"trasciende infaliblemente a la hora de vestir es el buen gusto por la ropa. "
+"Con esto, no se quiere decir que un pantalón clásico negro de vestir formal "
+"y una camisa blanca suelta y zapatos cerrados de tacón siempre esté acorde "
+"con la moda o que sea correcto: lo variado y colorido hacen que el lienzo se "
+"aprecie mejor."
+msgstr ""
+"Fashion is a purely abstract concept that evolves with each decade.Yesterday "
+"the plaid shirts were in fashion, but today the fashion is in wide striped "
+"camisoles with V-neckline,and perhaps tomorrow the fashion will lie in "
+"shirts to the body and plaid bell bottoms. However, what "
+"inevitablytranscends when it comes to dressing is good taste in clothes. "
+"This is not to say that a classic black formaldress pants and a loose white "
+"shirt and closed-heeled shoes are always in line with fashion or that it "
+"iscorrect: the variety and colors make the canvas better appreciated."
+
+#: .\outfitShow\settings.py:112
+msgid "English"
+msgstr ""
+
+#: .\outfitShow\settings.py:113
+msgid "Español"
+msgstr ""
+
+#: .\outfitShow\settings.py:114
+msgid "French"
+msgstr ""
