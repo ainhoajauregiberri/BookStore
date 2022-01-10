@@ -360,7 +360,7 @@
      <script type='application/ld+json'> 
         {
           "@context": "http://www.schema.org",
-          "@type": "person",
+          "@type": "Person",
           "name": "Naroa",
           "address": {
             "@type": "PostalAddress",
@@ -376,7 +376,7 @@
      <script type='application/ld+json'> 
          {
           "@context": "http://www.schema.org",
-          "@type": "person",
+          "@type": "Person",
           "name": "Lorea",
           "address": {
             "@type": "PostalAddress",
@@ -392,7 +392,7 @@
      <script type='application/ld+json'> 
         {
           "@context": "http://www.schema.org",
-          "@type": "person",
+          "@type": "Person",
           "name": "Nora",
           "address": {
             "@type": "PostalAddress",
@@ -408,7 +408,7 @@
      <script type='application/ld+json'> 
         {
           "@context": "http://www.schema.org",
-          "@type": "person",
+          "@type": "Person",
           "name": "Ainhoa",
           "address": {
             "@type": "PostalAddress",
@@ -421,6 +421,24 @@
           "telephone": "+34 999 999 999"
         }
      </script>
+
+     <!-- sintaxis de microdatos según Schema.org-->
+
+     <div itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Jon</span>
+        <span itemprop="email">jonleinena@opendeusto.es</span>
+        <span itemprop="telephone">+34 222 222 222</span>
+
+    </div>
+
+      <!-- sintaxis RDFa según Schema.org-->
+
+      <div vocab="http://schema.org/" typeof="Person">
+        <span property="name">Mikel</span>
+        <span property="email">mikelferrer@opendeusto.es</span>
+        <span property="telephone">+34 444 444 444</span>
+    </div>
+
 </body>
 
 </html>
