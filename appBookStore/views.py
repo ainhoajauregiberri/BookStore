@@ -82,7 +82,6 @@ def index(request):
 	editorial2 = Editorial.objects.get(pk=2)
 	librosEd2 = editorial2.libro_set.all()
 	librosEd2 = librosEd2.order_by('fechaPubli').reverse()
-	print(usuarioRegistrado)
 	context = {'libro1': librosEd1[0], 'libro2': librosEd2[0], 'usuarioRegistrado': usuarioRegistrado}
 	
 	return render(request, 'index.html', context)
@@ -101,7 +100,7 @@ def detallesLibro(request, libro_id):
 	#problema con id y objeto entero
 	#valoraciones = Valoracion.objects.get(libro=libro)
 	form = ValoracionCrear()
-	context = {'libro' : libroDetallado, 'autores' : autores, 'form': form, 'valoraciones': valoraciones}
+	context = {'libro' : libroDetallado, 'autores' : autores, 'form': form, 'valoraciones': valoraciones, 'usuarioRegistrado': usuarioRegistrado}
 	return render(request, 'detallesLibro.html', context)
 
 
