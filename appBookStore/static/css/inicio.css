@@ -109,29 +109,33 @@
 }
 
 .puntuar{
-  background: white; /* fallback for old browsers */
+  background: rgb(245, 241, 241); /* fallback for old browsers */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;   
- 
+  margin-top: 5%;
   padding-top: 20px;
   padding-bottom: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 10%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 
 .puntuarBox {
   position: relative;
   z-index: 1;
-  background: #FFFFFF;
+  background: rgb(245, 241, 241);
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin-bottom: 0%;
 }
 .puntuarBox input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #f2f2f2;
+  background: white;
   width: 100%;
   border: 0;
   margin: 0 0 15px;

@@ -71,14 +71,8 @@
                {% endif %}
        </div>
    </div>
-
-   
-       <h3>¡Echa un vistazo a los comentarios!</h3> 
-
-   
-   
-
    <div class="comentarios">
+    <h3>¡Echa un vistazo a los comentarios!</h3> 
        {% for valoracion in valoraciones %}
        <hr/>
        <b>{{valoracion.usuario.usuario}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{valoracion.puntuacion}}
@@ -91,12 +85,12 @@
 </br>
 </br>
        {% endfor %}
-
-
+       <div class="puntuar">
+       <form action="{% url 'getDatosValoracion' libro.id %}" method="POST">
        {% if usuarioRegistrado %} 
        <h3 class="tituloComentarios">¡{{usuarioRegistrado}}, anímate a dejar tu comentario!</h3>
        {% endif %}
-       <form action="{% url 'getDatosValoracion' libro.id %}" method="POST">
+      
 
         <!--
         <span class="fa fa-star" onclick="calificar(this)" id="1estrella"></span>
@@ -108,11 +102,6 @@
 
     onclick="mediaBD(this, parseInt('{{libro.id}}'), parseInt('{{ libro.mediaValoracion}}'), parseInt('{{ libro.numValoraciones}}'))"
     -->
-
-   
-</br>
-</br>
-    <div class="puntuar">
         <div class="puntuarBox">
             <div class="login-form">
         {% csrf_token %}
