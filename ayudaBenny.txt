@@ -1,0 +1,16 @@
+Hola Benny!
+
+Para acceder a la página web puedes utilizar los siguientes datos:
+	usuario: benny96
+	password: kaixo1234
+
+Para acceder a /admin puedes utilziar los siguientes datos:
+	Opción superusuario:
+		usuario: adminDjango
+		password: adminDjango
+	Opción usuario activo:
+		usuario: Benny96
+		password: Benny96
+
+WARNING: tienes que acceder a la pagina web desde la siguiente url, porque para acceder a la página web siempre hay que iniciar sesión.
+	http://127.0.0.1:8000/appBookStore/
