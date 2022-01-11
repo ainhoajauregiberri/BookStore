@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-11 16:08+0100\n"
+"POT-Creation-Date: 2022-01-11 16:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,34 +18,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\appBookStore\templates\base.html:76
+#: .\appBookStore\templates\base.html:73
 msgid "Inicio"
 msgstr "Home"
 
-#: .\appBookStore\templates\base.html:79
+#: .\appBookStore\templates\base.html:76
 msgid "Libros"
 msgstr "Books"
 
-#: .\appBookStore\templates\base.html:82
+#: .\appBookStore\templates\base.html:79
 msgid "Editoriales"
 msgstr "Editorials"
 
-#: .\appBookStore\templates\base.html:85
+#: .\appBookStore\templates\base.html:82
 msgid "Autores"
 msgstr "Authors"
 
-#: .\appBookStore\templates\base.html:109
+#: .\appBookStore\templates\base.html:106
 msgid "Más información"
 msgstr "More information"
 
-#: .\appBookStore\templates\base.html:110
+#: .\appBookStore\templates\base.html:107
 msgid ""
 "La librería Book Store dispone de información de distintos libros, autores y "
 "editoriales."
 msgstr ""
 "The Book Store has information on different books, authors and publishers."
 
-#: .\appBookStore\templates\base.html:112
+#: .\appBookStore\templates\base.html:109
 msgid ""
 "Si desea saber más contacta con nosotros mediante correo electrónico, redes "
 "sociales o el teléfono de atención al cliente."
@@ -53,27 +53,27 @@ msgstr ""
 "If you want to know more, contact us by email, social networks or the "
 "customer service phone."
 
-#: .\appBookStore\templates\base.html:115
+#: .\appBookStore\templates\base.html:112
 msgid "Redes sociales"
 msgstr "Social networks"
 
-#: .\appBookStore\templates\base.html:118
+#: .\appBookStore\templates\base.html:115
 msgid "Siguenos en Twitter"
 msgstr "Follow us on Twitter"
 
-#: .\appBookStore\templates\base.html:122
+#: .\appBookStore\templates\base.html:119
 msgid "Siguenos en Facebook"
 msgstr "Follow us on Facebook"
 
-#: .\appBookStore\templates\base.html:126
+#: .\appBookStore\templates\base.html:123
 msgid "Siguenos en Instagram"
 msgstr "Follow us on Instagram"
 
-#: .\appBookStore\templates\base.html:131
+#: .\appBookStore\templates\base.html:128
 msgid "Información Contactos"
 msgstr "Contact us"
 
-#: .\appBookStore\templates\base.html:157
+#: .\appBookStore\templates\base.html:154
 msgid "Todos los derechos reservados | By Ainhoa, Lorea, Naroa y Nora"
 msgstr "All rigths reserved | By Ainhoa, Lorea, Naroa and Nora"
 
@@ -97,3 +97,15 @@ msgstr "Don't have an accout yet?"
 #: .\appBookStore\templates\inicio.html:32
 msgid "Crear una cuenta"
 msgstr "Create new account"
+
+#: .\appBookStore\templates\listaAutores.html:3
+msgid "¡Echa un vistazo a todos los autores!"
+msgstr "Take a look at our authors!"
+
+#: .\appBookStore\templates\listaEditoriales.html:3
+msgid "¿Por cuál de las editoriales te decantas?"
+msgstr "What editorial would you choose?"
+
+#: .\appBookStore\templates\listaLibros.html:5
+msgid "¡Echa un vistazo a todos los libros que tenemos!"
+msgstr "Take a look at our book colection!"

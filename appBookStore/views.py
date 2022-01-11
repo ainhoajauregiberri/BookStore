@@ -2,6 +2,7 @@ from django.http import HttpResponse, Http404
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, get_list_or_404
 from django.shortcuts import render
+from django.utils.translation import gettext as _
 
 from appBookStore.forms import UsuarioForm, UsuariosExistentesForm, ValoracionCrear
 from .models import Autor, Genero, Idioma, Editorial, Libro, Usuario, Valoracion
@@ -89,7 +90,9 @@ def index(request):
 #devuelve la lista de LIBROS
 def listaLibros(request):
 	libros = get_list_or_404(Libro.objects.order_by('id'))
-	context = {'lista_libros' : libros}
+	context = {
+		'lista_libros' : libros
+		}
 	return render(request, 'listaLibros.html', context)
 
 #devuelve los detalles de un LIBRO
