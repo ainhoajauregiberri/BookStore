@@ -111,7 +111,6 @@ USE_I18N = True
 LANGUAGE_CODE = 'es'
 _ = lambda s:s
 LANGUAGES = [
-    ('en', _("Euskara")),
     ('es', _("Español")),
     ('en', _("English")),
 ]
