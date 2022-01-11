@@ -2,6 +2,7 @@ from django.db.models import fields
 from .models import Usuario
 from .models import Valoracion
 from django import forms
+from django.utils.translation import ugettext_lazy as _
 
 class UsuarioForm(forms.ModelForm):    
     class Meta:
