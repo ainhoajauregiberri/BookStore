@@ -4,6 +4,8 @@ from django.db.models.lookups import In
 
 import django.utils.datetime_safe
 from django.db.models.fields import FloatField, IntegerField
+from django.core.validators import MinValueValidator, MaxValueValidator
+
 
 from datetime import timezone
  
@@ -66,7 +68,7 @@ class Valoracion(models.Model):
  # No es necesario crear un campo para la Primary Key, Django creará automáticamente un IntegerField.
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
-    puntuacion = models.IntegerField(default=0)
+    puntuacion = models.IntegerField(default=0, validators=(MinValueValidator(0), MaxValueValidator(5)))
     texto = models.CharField(max_length=1000, default="")
     def __str__(self):
         return f"{self.id}:{self.usuario} {self.puntuacion} ({self.libro})"
