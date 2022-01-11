@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block titulo %} Iniciar sesión {% endblock %}
+{% block titulo %} 
+{% trans "Iniciar sesión" %}
+{% endblock %}
 
 {% block contenido %}
 
@@ -25,8 +28,8 @@
     <form class="login-form" action="{% url 'iniciarSesionUsuario' %}" method="POST">
       {% csrf_token %}
       {{form}}
-      <button type="submit">Iniciar sesión</button>
-      <p class="message">¿Aún no tiene una cuenta? <a href="{% url 'registrarse' %}">Crear una cuenta</a></p>
+      <button type="submit"> {% trans "Iniciar sesión" %}</button>
+      <p class="message">{% trans "¿Aún no tiene una cuenta?" %} <a href="{% url 'registrarse' %}">{% trans "Crear una cuenta" %}</a></p>
     </form>
   </div>
 </div>

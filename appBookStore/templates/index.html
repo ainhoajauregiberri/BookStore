@@ -5,9 +5,9 @@
 
 {% block titulo %}  
 {% if usuarioRegistrado %} 
-<p>Hola, {{usuarioRegistrado}}</p> 
+<p>{% trans "Hola," %} {{usuarioRegistrado}}</p> 
 {% endif %}
-¡Las últimas novedades de las editoriales! 
+{% trans "¡Las últimas novedades de las editoriales!" %}
 
 {% endblock %}
 
